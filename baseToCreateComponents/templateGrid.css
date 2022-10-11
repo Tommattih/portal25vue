@@ -1,0 +1,79 @@
+.container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr 0.25fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+  
+  .header {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navBar"
+      "refArea";
+    grid-area: header;
+  }
+  
+  .navBar { grid-area: navBar; }
+  
+  .refArea {  display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "numArea logoArea"
+      "nameArea logoArea";
+    grid-area: refArea;
+  }
+  
+  .numArea { grid-area: numArea; }
+  
+  .nameArea { grid-area: nameArea; }
+  
+  .logoArea { grid-area: logoArea; }
+  
+  .content {  display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "main aside";
+    grid-area: content;
+  }
+  
+  .aside {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "pageIcon"
+      "socialMedia"
+      "otherLinks"
+      "aboutProject"
+      "aboutDev";
+    grid-area: aside;
+  }
+  
+  .pageIcon { grid-area: pageIcon; }
+  
+  .socialMedia { grid-area: socialMedia; }
+  
+  .otherLinks { grid-area: otherLinks; }
+  
+  .aboutProject { grid-area: aboutProject; }
+  
+  .aboutDev { grid-area: aboutDev; }
+  
+  .main { grid-area: main; }
+  
+  .footer { grid-area: footer; }
+  
