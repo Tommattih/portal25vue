@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <PortalHeader numberArea="25" nameArea="Parque Vitória do Sol Nascente" />
+    <img alt="Portal Logo" src="../assets/ico-pvsn-25.png" />
+    <!-- Comentado para visualizar, uma vez que o Eslint não gosta de mim e ainda tenho que entender melhor sobre rotas -->
+
+    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import PortalHeader from "@/components/PortalHeader.vue";
+// import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    PortalHeader,
+    // HelloWorld,
   },
 };
 </script>
