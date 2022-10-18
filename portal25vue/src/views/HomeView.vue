@@ -1,8 +1,7 @@
 <template>
   <div class="home">
     <PortalHeader numberArea="25" nameArea="Parque Vitória do Sol Nascente" />
-    <img alt="Portal Logo" src="../assets/ico-pvsn-25.png" />
-    <!-- Comentado para visualizar, uma vez que o Eslint não gosta de mim e ainda tenho que entender melhor sobre rotas -->
+    <!-- Comentado para visualizar, uma vez que o Eslint e o Prettier não gostam de mim e ainda tenho que entender melhor sobre rotas -->
 
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
@@ -11,7 +10,7 @@
 
 <script>
 // @ is an alias to /src
-import PortalHeader from "@/components/PortalHeader.vue";
+import PortalHeader from "@/components/header/PortalHeader.vue";
 // import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
