@@ -1,6 +1,7 @@
 <template>
   <div class="headerInfo pb-2">
     <NavBar />
+    <!-- <img class="my-2" alt="Portal Logo" :src="`@/assets/img/${imageLogo}.png`" /> -->
     <img class="my-2" alt="Portal Logo" src="@/assets/img/ico-pvsn-25.png" />
     <h2 class="text-start px-2 ms-3 fs-3">Portal da {{ numberArea }}ª Área</h2>
     <h1 class="text-start px-2 mx-3 mb-1 fs-1">{{ nameArea }}</h1>
@@ -18,6 +19,11 @@ export default {
   components: {
     NavBar,
   },
+  // data() {
+  //   return {
+  //     imageLogo: "ico-pvsn-25",
+  //   };
+  // },
 };
 </script>
 

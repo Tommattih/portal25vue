@@ -1,6 +1,7 @@
 <template>
   <div class="aside">
     <img src="#" alt="">
+    <!-- mission: turn the 4 into 1 dynamic -->
     <SocialMedia />
     <OtherLinks />
     <AboutProject />
