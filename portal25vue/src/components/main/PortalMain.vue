@@ -1,13 +1,29 @@
 <template>
-  <div>
-    <h2>Any Title</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, repellendus est temporibus quia, hic ex nulla
-      dolores accusantium dignissimos vel porro optio sequi iusto placeat. Rem quam qui eius fugiat!</p>
+  <div class="boxContent">
+    <!-- import other component to render infoSelected -->
+    <h3>{{ title }}</h3>
+    <p>
+      {{ info }}
+    </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "PortalMain",
-};
+  name: 'PortalMain',
+  props: {
+    title: String,
+    info: String
+  }
+}
 </script>
+<style scoped>
+.boxContent {
+  width: 80%;
+  border: 1px dotted var(--bg-color);
+}
+h3 {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+</style>
