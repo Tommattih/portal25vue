@@ -26,9 +26,7 @@
           type="checkbox"
           id="flexSwitchCheckDefault"
         />
-        <label class="form-check-label" for="flexSwitchCheckDefault"
-          ><b-icon icon="lightbulb-off" aria-hidden="true"></b-icon
-        ></label>
+        <label class="form-check-label" for="flexSwitchCheckDefault"> </label>
         <!-- <v-else:"" label class="form-check-label" for="flexSwitchCheckDefault"
           ><b-icon icon="lightbulb-on" aria-hidden="true"></b-icon
         ></label> -->

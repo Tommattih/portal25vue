@@ -87,7 +87,7 @@ h4 {
   text-decoration-line: underline;
 }
 .asideBox {
-  border: 1px dotted var(--bg-color);
+  border: 1px dotted #60663962;
   width: 20%;
 }
 ul {
@@ -106,5 +106,9 @@ ul {
 ul li img {
   height: 2.25rem;
   margin: 0.5rem;
+}
+p,
+a {
+  font-size: 1rem;
 }
 </style>

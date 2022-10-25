@@ -31,6 +31,22 @@ export default {
 <style>
 .home {
   overflow-x: hidden;
+  background: #606639;
+  background: linear-gradient(
+    115deg,
+    rgba(96, 102, 57, 1) 0%,
+    rgba(243, 247, 224, 1) 20%,
+    rgba(237, 241, 217, 1) 80%,
+    rgba(131, 137, 93, 1) 100%
+  );
+  /* use in dark 
+  background: rgb(63, 57, 102);
+  background: linear-gradient(
+    14deg,
+    rgba(63, 57, 102, 1) 0%,
+    rgb(43, 43, 61) 50%,
+    rgb(51, 51, 77) 100%
+  ); */
 }
 .content {
   display: inline-flex;

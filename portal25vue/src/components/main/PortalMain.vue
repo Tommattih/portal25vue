@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .boxContent {
   width: 80%;
-  border: 1px dotted var(--bg-color);
+  border: 1px dotted #60663962;
 }
 h3 {
   background-color: var(--bg-color);
