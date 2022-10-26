@@ -40,6 +40,7 @@ export default {
 <style>
 :root {
   --bg-color: #606639;
+  --font-color2: #262b05;
   --font-color: #f3f7e0;
   box-sizing: border-box;
 }

@@ -8,13 +8,19 @@
       <ul class="d-flex flex-row px-3">
         <li>
           <a href="https://www.instagram.com/pvsn.25/" target="_blank">
-            <!-- <img src="./img/instagramWhite.svg" alt="Instagram" /> -->
+            <img
+              src="@/assets/img/socialMedia/instagramBorderBlack.svg"
+              alt=""
+            />
             <p>Instagram</p>
           </a>
         </li>
         <li>
           <a href="https://fb.me/PVSN.25" target="_blank">
-            <!-- <img src="./img/facebookWhite.svg" alt="Facebook" /> -->
+            <img
+              src="@/assets/img/socialMedia/facebookBorderBlack.svg"
+              alt=""
+            />
             <p>Facebook</p>
           </a>
         </li>
@@ -23,16 +29,16 @@
             href="https://chat.whatsapp.com/K4JaFotEZSWC7EAtq2xn2y"
             target="_blank"
           >
-            <!-- <img
-            src="./img/whatsappWhite.svg"
-            alt="Whatsapp Link para o grupo geral"
-          /> -->
+            <img
+              src="@/assets/img/socialMedia/whatsappBorderBlack.svg"
+              alt=""
+            />
             <p>Grupo Geral</p>
           </a>
         </li>
         <li>
           <a href="https://discord.gg/ABEhtET4dC" target="_blank">
-            <!-- <img src="./img/discordWhite.svg" alt="Discord" /> -->
+            <img src="@/assets/img/socialMedia/discordBorderBlack.svg" alt="" />
             <p>Discord</p>
           </a>
         </li>
@@ -85,6 +91,8 @@ export default {
 h4 {
   font-size: 1.25rem;
   text-decoration-line: underline;
+  text-underline-offset: 4px;
+  padding: 1rem 0 0.5rem;
 }
 .asideBox {
   border: 1px dotted #60663962;
@@ -92,23 +100,47 @@ h4 {
 }
 ul {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-#aboutDev img {
-  width: 5rem;
-  margin: 0.5rem auto;
+  /* flex-direction: row; */
 }
 .imgRender img {
   width: 100%;
 }
 ul li img {
-  height: 2.25rem;
+  height: 2rem;
   margin: 0.5rem;
 }
 p,
-a {
-  font-size: 1rem;
+a,
+a:hover {
+  font-size: 1.1rem;
+  color: var(--font-color2);
+  text-decoration: none;
+  text-shadow: 2px 0px 3px var(--font-color);
+}
+li:hover {
+  border: dotted 1px #bbd8a36c;
+  padding: 0 0.5rem;
+  transition: 0.2s;
+  border-radius: 0.5rem;
+  background: var(--font-color);
+  filter: brightness(1.05);
+}
+#aboutDev img {
+  width: 5rem;
+  margin: 0.5rem auto;
+}
+#aboutDev a:hover {
+  width: 80%; /*turn patern?*/
+  margin: 0 auto;
+  transition: 0.25s;
+  border-radius: 0.5rem;
+  background: var(--font-color);
+  filter: brightness(0.9);
+}
+p {
+  text-align: center;
+  padding: 0 1rem;
 }
 </style>

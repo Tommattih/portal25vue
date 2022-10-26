@@ -9,6 +9,7 @@
       />
       <AsideContent />
     </div>
+    <p class="mb-0 pb-2">M.T. Lins - Brasil - 2022</p>
   </div>
 </template>
 
@@ -31,13 +32,14 @@ export default {
 <style>
 .home {
   overflow-x: hidden;
+  max-width: 100vw;
   background: #606639;
   background: linear-gradient(
-    115deg,
+    180deg,
     rgba(96, 102, 57, 1) 0%,
-    rgba(243, 247, 224, 1) 20%,
-    rgba(237, 241, 217, 1) 80%,
-    rgba(131, 137, 93, 1) 100%
+    rgba(243, 247, 224, 1) 12%,
+    rgba(237, 241, 217, 1) 75%,
+    rgb(166, 172, 127) 100%
   );
   /* use in dark 
   background: rgb(63, 57, 102);
