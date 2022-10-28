@@ -80,7 +80,20 @@
 
 <script>
 export default {
-  name: 'AsideContent'
+  name: 'AsideContent',
+  data() {
+    return {
+      linkInstagram: 'https://www.instagram.com/pvsn.25/',
+      linkFacebook: 'https://fb.me/PVSN.25',
+      linkWhatsappGroup: 'https://chat.whatsapp.com/K4JaFotEZSWC7EAtq2xn2y',
+      linkDiscordServer: 'https://discord.gg/ABEhtET4dC',
+      linkDWG:
+        'https://drive.google.com/file/d/17qEcm0crWzm3HLrvgScMqHbGc5LNFnZm/view?usp=sharing',
+      linkBase:
+        'https://docs.google.com/spreadsheets/d/189o1r6BDabCCI_lDz6GeMch8T6TuCLvx_U69waz4OnI/edit?usp=sharing',
+      linkTommattih: 'https://tommattih.github.io/'
+    }
+  }
 }
 </script>
 <style scoped>
