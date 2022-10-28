@@ -1,13 +1,14 @@
 <template>
   <div class="asideBox d-grid px-2">
     <div class="imgRender pb-3">
+      <!-- tornar dinamico `:src="-acessar um objeto{} no pai, nav altera templates no objeto pra true ou false ..v-show?-"` e `:alt=""` -->
       <img src="@/assets/img/asideIcons/medal-pvsn.png" alt="" />
     </div>
     <div id="socialMedia" class="row">
       <h4>Mídias Sociais</h4>
       <ul class="d-flex flex-row px-3">
         <li>
-          <a href="https://www.instagram.com/pvsn.25/" target="_blank">
+          <a :href="linkInstagram" target="_blank">
             <img
               src="@/assets/img/socialMedia/instagramBorderBlack.svg"
               alt=""
@@ -16,7 +17,7 @@
           </a>
         </li>
         <li>
-          <a href="https://fb.me/PVSN.25" target="_blank">
+          <a :href="linkFacebook" target="_blank">
             <img
               src="@/assets/img/socialMedia/facebookBorderBlack.svg"
               alt=""
@@ -25,10 +26,7 @@
           </a>
         </li>
         <li>
-          <a
-            href="https://chat.whatsapp.com/K4JaFotEZSWC7EAtq2xn2y"
-            target="_blank"
-          >
+          <a :href="linkWhatsappGroup" target="_blank">
             <img
               src="@/assets/img/socialMedia/whatsappBorderBlack.svg"
               alt=""
@@ -37,7 +35,7 @@
           </a>
         </li>
         <li>
-          <a href="https://discord.gg/ABEhtET4dC" target="_blank">
+          <a :href="linkDiscordServer" target="_blank">
             <img src="@/assets/img/socialMedia/discordBorderBlack.svg" alt="" />
             <p>Discord</p>
           </a>
@@ -48,12 +46,13 @@
       <h4>Links Úteis</h4>
       <ul>
         <li>
-          <a href="#"
+          <!-- <a v-bind:href="suaVariavelAqui" -->
+          <a :href="linkDWG" target="_blank"
             ><img src="@/assets/img/otherLinks/ico-dwg.png" alt="" />DWG</a
           >
         </li>
         <li>
-          <a href="#"
+          <a :href="linkBase" target="_blank"
             ><img src="@/assets/img/otherLinks/ico-base.png" alt="" />Base</a
           >
         </li>
@@ -67,14 +66,14 @@
         interação e a troca entre moradores.
       </p>
     </div>
-    <div id="aboutDev" class="row">
+    <div id="aboutDev" class="row mb-2">
       <h4>Sobre o Dev</h4>
       <p>
         Aquele que encontrou na programação uma forma diferente de ver a vida e
         trazer acessibilidade a informação.
       </p>
       <img src="@/assets/img/ico-tommattih.png" alt="" />
-      <a href="https://tommattih.github.io/">Saiba mais</a>
+      <a :href="linkTommattih" target="_blank">Saiba mais</a>
     </div>
   </div>
 </template>
