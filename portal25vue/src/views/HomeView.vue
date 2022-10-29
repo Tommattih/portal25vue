@@ -7,9 +7,9 @@
         title="Any info"
         info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolor, facilis nulla vel, nam laboriosam temporibus culpa non asperiores aperiam quis atque sit placeat eum commodi ea quia, voluptatem suscipit."
       />
-      <AsideContent />
+      <AsideContent class="" />
     </div>
-    <p class="mb-0 pb-2">M.T. Lins - Brasil - 2022</p>
+    <p @click="clicou()" class="mb-0 pb-2">M.T. Lins - Brasil - 2022</p>
   </div>
 </template>
 
@@ -25,6 +25,20 @@ export default {
     PortalHeader,
     AsideContent,
     PortalMain
+  },
+  data() {
+    return {
+      news: true,
+      history: 'false',
+      maps: 'false',
+      environment: 'false',
+      blueprints: 'false',
+      services: 'false',
+      faq: 'false',
+      clicou: () => {
+        alert('wahoo')
+      }
+    }
   }
 }
 </script>

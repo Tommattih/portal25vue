@@ -1,19 +1,26 @@
 <template>
   <div class="asideBox d-grid px-2">
-    <div class="imgRender pb-3">
+    <div class="imgRender mb-3 mobileHidden">
       <!-- tornar dinamico `:src="-acessar um objeto{} no pai, nav altera templates no objeto pra true ou false ..v-show?-"` e `:alt=""` -->
       <img src="@/assets/img/asideIcons/medal-pvsn.png" alt="" />
     </div>
     <div id="socialMedia" class="row">
-      <h4>Mídias Sociais</h4>
-      <ul class="d-flex flex-row px-3">
+      <h4 class="mobileHidden">Mídias Sociais</h4>
+      <ul class="d-flex">
+        <li>
+          <a :href="linkDiscordServer" target="_blank">
+            <img
+              src="@/assets/img/socialMedia/discordBorderBlack.svg"
+              alt=""
+            /><span class="mobileHidden">Discord</span>
+          </a>
+        </li>
         <li>
           <a :href="linkInstagram" target="_blank">
             <img
               src="@/assets/img/socialMedia/instagramBorderBlack.svg"
               alt=""
-            />
-            <p>Instagram</p>
+            /><span class="mobileHidden">Instagram</span>
           </a>
         </li>
         <li>
@@ -21,44 +28,42 @@
             <img
               src="@/assets/img/socialMedia/facebookBorderBlack.svg"
               alt=""
-            />
-            <p>Facebook</p>
+            /><span class="mobileHidden">Facebook</span>
           </a>
         </li>
         <li>
           <a :href="linkWhatsappGroup" target="_blank">
             <img
               src="@/assets/img/socialMedia/whatsappBorderBlack.svg"
-              alt=""
-            />
-            <p>Grupo Geral</p>
-          </a>
-        </li>
-        <li>
-          <a :href="linkDiscordServer" target="_blank">
-            <img src="@/assets/img/socialMedia/discordBorderBlack.svg" alt="" />
-            <p>Discord</p>
+              alt="Logo do Whatsapp para o Grupo Geral da área"
+            /><span class="mobileHidden">Whatsapp</span>
           </a>
         </li>
       </ul>
     </div>
     <div id="otherLinks" class="row">
-      <h4>Links Úteis</h4>
+      <h4 class="mobileHidden">Links Úteis</h4>
       <ul>
         <li>
           <!-- <a v-bind:href="suaVariavelAqui" -->
           <a :href="linkDWG" target="_blank"
-            ><img src="@/assets/img/otherLinks/ico-dwg.png" alt="" />DWG</a
+            ><img src="@/assets/img/otherLinks/ico-dwg.png" alt="" /><span
+              class="mobileHidden"
+              >DWG</span
+            ></a
           >
         </li>
         <li>
           <a :href="linkBase" target="_blank"
-            ><img src="@/assets/img/otherLinks/ico-base.png" alt="" />Base</a
+            ><img src="@/assets/img/otherLinks/ico-base.png" alt="" /><span
+              class="mobileHidden"
+              >Base</span
+            ></a
           >
         </li>
       </ul>
     </div>
-    <div id="aboutProject" class="row">
+    <div id="aboutProject" class="row px-2 mobileHidden">
       <h4>Sobre o Projeto</h4>
       <p>
         O Portal foi criado para atender a falta de uma fonte de informações
@@ -66,7 +71,7 @@
         interação e a troca entre moradores.
       </p>
     </div>
-    <div id="aboutDev" class="row mb-2">
+    <div id="aboutDev" class="row px-2 mb-2 mobileHidden">
       <h4>Sobre o Dev</h4>
       <p>
         Aquele que encontrou na programação uma forma diferente de ver a vida e
@@ -99,28 +104,49 @@ export default {
 <style scoped>
 * {
   list-style: none;
+  text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+  .mobileHidden {
+    display: none;
+  }
+  ul {
+    margin-bottom: 0;
+    gap: 0;
+  }
+  li {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+}
+/******* full view ********/
+.imgRender img {
+  width: 100%;
+  padding: 0.5rem;
 }
 h4 {
   font-size: 1.25rem;
   text-decoration-line: underline;
   text-underline-offset: 4px;
-  padding: 1rem 0 0.5rem;
+  margin: 0 auto 1rem;
 }
 .asideBox {
   border: 1px dotted #60663962;
-  width: 20%;
+  width: 30%;
+  min-width: min-content;
 }
 ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  /* flex-direction: row; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 0.5rem;
 }
-.imgRender img {
-  width: 100%;
+li {
+  transition: 0.25s;
+  margin-bottom: 1px;
 }
 ul li img {
-  height: 2rem;
+  height: 1.75rem;
   margin: 0.5rem;
 }
 p,
@@ -128,16 +154,17 @@ a,
 a:hover {
   font-size: 1.1rem;
   color: var(--font-color2);
-  text-decoration: none;
   text-shadow: 2px 0px 3px var(--font-color);
 }
 li:hover {
-  border: dotted 1px #bbd8a36c;
-  padding: 0 0.5rem;
-  transition: 0.2s;
+  border: groove 1px #bbd8a36c;
   border-radius: 0.5rem;
   background: var(--font-color);
   filter: brightness(1.05);
+  margin: 0 1.25rem;
+}
+#socialMedia li {
+  padding: 0 1.25rem;
 }
 #aboutDev img {
   width: 5rem;

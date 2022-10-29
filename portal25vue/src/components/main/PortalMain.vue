@@ -19,7 +19,6 @@ export default {
 </script>
 <style scoped>
 .boxContent {
-  width: 80%;
   border: 1px dotted #60663962;
 }
 h3 {
