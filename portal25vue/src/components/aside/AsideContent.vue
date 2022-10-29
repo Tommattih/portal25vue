@@ -1,6 +1,6 @@
 <template>
   <div class="asideBox d-grid px-2">
-    <div class="imgRender mb-3 mobileHidden">
+    <div class="imgRender mb-2 mobileHidden">
       <!-- tornar dinamico `:src="-acessar um objeto{} no pai, nav altera templates no objeto pra true ou false ..v-show?-"` e `:alt=""` -->
       <img src="@/assets/img/asideIcons/medal-pvsn.png" alt="" />
     </div>
@@ -122,17 +122,17 @@ export default {
 /******* full view ********/
 .imgRender img {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
 }
 h4 {
   font-size: 1.25rem;
   text-decoration-line: underline;
   text-underline-offset: 4px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.5rem;
 }
 .asideBox {
   border: 1px dotted #60663962;
-  width: 30%;
+  max-width: 25%;
   min-width: min-content;
 }
 ul {
@@ -160,7 +160,7 @@ li:hover {
   border: groove 1px #bbd8a36c;
   border-radius: 0.5rem;
   background: var(--font-color);
-  filter: brightness(1.05);
+  filter: brightness(1.025);
   margin: 0 1.25rem;
 }
 #socialMedia li {
@@ -180,6 +180,6 @@ li:hover {
 }
 p {
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
 </style>

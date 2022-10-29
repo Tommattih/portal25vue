@@ -47,6 +47,7 @@ export default {
 .home {
   overflow-x: hidden;
   max-width: 100vw;
+  min-height: 100vh;
   background: #606639;
   background: linear-gradient(
     180deg,
