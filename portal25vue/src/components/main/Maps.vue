@@ -1,39 +1,24 @@
 <template>
   <div id="maps">
-    <h5>Pontos de referência:</h5>
-    <p v-for="refpoint in nearby" :key="refpoint.id">
-      {{ refpoint.refPoints }}
-    </p>
-    <!-- quase pronto pra usar no aside -->
-    <img
-      v-for="focusicon in asideicon"
-      v-show="focusicon.status == true"
-      :key="focusicon.id"
-      :src="focusicon.srcimage"
-      :alt="focusicon.alt"
-    />
+    <mapsView />
   </div>
 </template>
 
 <script>
+import mapsView from '../../views/MapsView.vue'
 export default {
   name: 'MapsDirections',
   data() {
     return {
-      nearby: [
-        { id: 1, refPoints: 'SP-021, Rodoanel Mario Covas' },
-        { id: 2, refPoints: 'Cemitério do Jaraguá' },
-        { id: 3, refPoints: 'BR-050, Parque São Domingos' },
-        { id: 4, refPoints: 'KM-24, Rodovia Anhanguera' },
-        { id: 5, refPoints: 'Nas proximidades do Pico do Jaraguá' },
-        { id: 6, refPoints: 'Terminal Jardim Britânia' }
-      ]
+      h3: 'top'
     }
-  }
+  },
+  components: { mapsView }
 }
 </script>
 
 <style>
+/* ta ao contrario a lógica de importação
 /*ñ é estilo é nota
 <div class="box">
                     <div class="map">

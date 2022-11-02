@@ -1,14 +1,10 @@
 <template>
   <div>
     <h3>{{ titleMap }}</h3>
-    <iframe
-      :src="googleMaps"
-      width="770"
-      height="728"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-    ></iframe>
+    <a :href="googleMaps">
+      <img :src="mapSat" alt="" />
+      <img :src="mapDraw" alt="" />
+    </a>
     <h5>Pontos de Referencia de Carro U+1F698</h5>
     <p v-for="refpoint in nearby" :key="refpoint.id">
       {{ refpoint.refPoints }}
@@ -38,8 +34,9 @@ export default {
   data() {
     return {
       titleMap: 'Como Chegar',
-      googleMaps:
-        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1787.8994050230262!2d-46.778048990577396!3d-23.4400447481186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefcf9ff046bed%3A0xbba599a8eb55ab4!2sAlameda%20Aristotenes%20Claudio%20Sbrigh%2C%20923%20-%20Vila%20Jaragu%C3%A1%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005282-000!5e1!3m2!1spt-BR!2sbr!4v1622959672281!5m2!1spt-BR!2sbr',
+      mapSat: '/img/mapSat.png',
+      mapDraw: '/img/mapDraw.png',
+      googleMaps: 'https://goo.gl/maps/28BABSX6SCNMPUGHA',
       StreetsMap:
         'https://drive.google.com/file/d/1lHwLix3QFvup7qz5IQ5og_p8BoiybZCH/view?usp=sharing',
       BlocksMaps:
@@ -57,9 +54,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 h3 {
   background: red;
+}
+img {
+  width: fit-content;
+  height: 40vh;
+  padding-bottom: 1rem;
 }
 </style>
 "

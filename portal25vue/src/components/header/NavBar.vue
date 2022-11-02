@@ -13,7 +13,9 @@
           <b-nav-item href="#">Notícias</b-nav-item>
           <b-nav-item href="#">História</b-nav-item>
           <b-nav-item href="#">Rotas</b-nav-item>
-          <b-nav-item href="#">DoBem</b-nav-item>
+          <b-nav-item href="#"
+            ><router-link to="/do-bem">DoBem</router-link></b-nav-item
+          >
           <b-nav-item href="#">Planta</b-nav-item>
           <b-nav-item href="#"
             ><router-link to="/mapas">Mapas</router-link></b-nav-item

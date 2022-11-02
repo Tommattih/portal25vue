@@ -1,17 +1,20 @@
 <template>
   <div class="boxContent">
-    <!-- import other component to render infoSelected -->
     <h3>{{ title }}</h3>
     <p>
       {{ info }}
     </p>
-    <mapsDirections />
+    <HistoryView />
+    <!-- importar componentes estilizados com o formato do box-content 
+    OU definir como style scoped 
+    OU ???-->
+    <!-- a lógica ta invertida nos componentes e rotas-->
     <!-- just to test view -->
   </div>
 </template>
 
 <script>
-import MapsDirections from './Maps.vue'
+import HistoryView from '@/views/HistoryView.vue'
 export default {
   name: 'PortalMain',
   props: {
@@ -19,7 +22,7 @@ export default {
     info: String
   },
   components: {
-    MapsDirections
+    HistoryView
   }
 }
 </script>
