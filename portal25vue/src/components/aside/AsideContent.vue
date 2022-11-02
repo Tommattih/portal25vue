@@ -2,39 +2,46 @@
   <div class="asideBox d-grid px-2">
     <div class="imgRender mb-2 mobileHidden">
       <!-- tornar dinamico `:src="-acessar um objeto{} no pai, nav altera templates no objeto pra true ou false ..v-show?-"` e `:alt=""` -->
-      <img src="@/assets/img/asideIcons/medal-pvsn.png" alt="" />
+      <!-- <img src="/img/asideIcons/medal-pvsn.png" alt="" /> -->
+      <img
+        v-for="focusicon in asideicon"
+        v-show="focusicon.status == true"
+        :key="focusicon.id"
+        :src="focusicon.srcimage"
+        :alt="focusicon.alt"
+      />
     </div>
     <div id="socialMedia" class="row">
       <h4 class="mobileHidden">Mídias Sociais</h4>
       <ul class="d-flex">
         <li>
           <a :href="linkDiscordServer" target="_blank">
-            <img
-              src="@/assets/img/socialMedia/discordBorderBlack.svg"
-              alt=""
-            /><span class="mobileHidden">Discord</span>
+            <img src="/img/socialMedia/discordBorderBlack.svg" alt="" /><span
+              class="mobileHidden"
+              >Discord</span
+            >
           </a>
         </li>
         <li>
           <a :href="linkInstagram" target="_blank">
-            <img
-              src="@/assets/img/socialMedia/instagramBorderBlack.svg"
-              alt=""
-            /><span class="mobileHidden">Instagram</span>
+            <img src="/img/socialMedia/instagramBorderBlack.svg" alt="" /><span
+              class="mobileHidden"
+              >Instagram</span
+            >
           </a>
         </li>
         <li>
           <a :href="linkFacebook" target="_blank">
-            <img
-              src="@/assets/img/socialMedia/facebookBorderBlack.svg"
-              alt=""
-            /><span class="mobileHidden">Facebook</span>
+            <img src="/img/socialMedia/facebookBorderBlack.svg" alt="" /><span
+              class="mobileHidden"
+              >Facebook</span
+            >
           </a>
         </li>
         <li>
           <a :href="linkWhatsappGroup" target="_blank">
             <img
-              src="@/assets/img/socialMedia/whatsappBorderBlack.svg"
+              src="/img/socialMedia/whatsappBorderBlack.svg"
               alt="Logo do Whatsapp para o Grupo Geral da área"
             /><span class="mobileHidden">Whatsapp</span>
           </a>
@@ -47,7 +54,7 @@
         <li>
           <!-- <a v-bind:href="suaVariavelAqui" -->
           <a :href="linkDWG" target="_blank"
-            ><img src="@/assets/img/otherLinks/ico-dwg.png" alt="" /><span
+            ><img src="/img/otherLinks/ico-dwg.png" alt="" /><span
               class="mobileHidden"
               >DWG</span
             ></a
@@ -55,7 +62,7 @@
         </li>
         <li>
           <a :href="linkBase" target="_blank"
-            ><img src="@/assets/img/otherLinks/ico-base.png" alt="" /><span
+            ><img src="/img/otherLinks/ico-base.png" alt="" /><span
               class="mobileHidden"
               >Base</span
             ></a
@@ -77,7 +84,7 @@
         Aquele que encontrou na programação uma forma diferente de ver a vida e
         trazer acessibilidade a informação.
       </p>
-      <img src="@/assets/img/ico-tommattih.png" alt="" />
+      <img src="/img/asideIcons/ico-tommattih.png" alt="" />
       <a :href="linkTommattih" target="_blank">Saiba mais</a>
     </div>
   </div>
@@ -88,6 +95,44 @@ export default {
   name: 'AsideContent',
   data() {
     return {
+      asideicon: [
+        {
+          id: 1,
+          srcimage: '/img/asideIcons/ico-news-page.png',
+          alt: 'ico-news',
+          status: false
+        },
+        {
+          id: 2,
+          srcimage: '/img/asideIcons/ico-history-page.png',
+          alt: 'ico-history',
+          status: false
+        },
+        {
+          id: 3,
+          srcimage: '/img/asideIcons/ico-plants-page.png',
+          alt: 'ico-plants',
+          status: false
+        },
+        {
+          id: 4,
+          srcimage: '/img/asideIcons/ico-maps-page.png',
+          alt: 'ico-maps',
+          status: false
+        },
+        {
+          id: 5,
+          srcimage: '/img/asideIcons/ico-services-page.png',
+          alt: 'ico-services',
+          status: false
+        },
+        {
+          id: 6,
+          srcimage: '/img/asideIcons/medal-pvsn.png',
+          alt: 'medal-pvsn',
+          status: true
+        }
+      ],
       linkInstagram: 'https://www.instagram.com/pvsn.25/',
       linkFacebook: 'https://fb.me/PVSN.25',
       linkWhatsappGroup: 'https://chat.whatsapp.com/K4JaFotEZSWC7EAtq2xn2y',

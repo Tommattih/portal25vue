@@ -20,44 +20,6 @@ export default {
   name: 'MapsDirections',
   data() {
     return {
-      asideicon: [
-        {
-          id: 1,
-          srcimage: '/img/asideIcons/ico-news-page.png',
-          alt: 'ico-news',
-          status: false
-        },
-        {
-          id: 2,
-          srcimage: '/img/asideIcons/ico-history-page.png',
-          alt: 'ico-history',
-          status: false
-        },
-        {
-          id: 3,
-          srcimage: '/img/asideIcons/ico-plants-page.png',
-          alt: 'ico-plants',
-          status: false
-        },
-        {
-          id: 4,
-          srcimage: '/img/asideIcons/ico-maps-page.png',
-          alt: 'ico-maps',
-          status: false
-        },
-        {
-          id: 5,
-          srcimage: '/img/asideIcons/ico-services-page.png',
-          alt: 'ico-services',
-          status: false
-        },
-        {
-          id: 6,
-          srcimage: '/img/asideIcons/medal-pvsn.png',
-          alt: 'medal-pvsn',
-          status: true
-        }
-      ],
       nearby: [
         { id: 1, refPoints: 'SP-021, Rodoanel Mario Covas' },
         { id: 2, refPoints: 'Cemitério do Jaraguá' },

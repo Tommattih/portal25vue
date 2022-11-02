@@ -1,13 +1,9 @@
 <template>
   <div class="header">
     <NavBar />
-    <!-- <img class="my-2" alt="Portal Logo" :src="`@/assets/img/${imageLogo}.png`" /> -->
+    <!-- <img class="my-2" alt="Portal Logo" :src="`/img/${imageLogo}.png`" /> -->
     <div class="areaInfo">
-      <img
-        class="logoHeader"
-        alt="Portal Logo"
-        src="@/assets/img/ico-pvsn-25.png"
-      />
+      <img class="logoHeader" alt="Portal Logo" src="/img/ico-pvsn-25.png" />
       <div>
         <h2 class="text-start px-3 pt-1 ms-3 mb-0 fs-3">
           Portal da {{ numberArea }}ª Área
@@ -46,7 +42,7 @@ export default {
 }
 
 .header {
-  background-image: url(@/assets/img/bg-header.png);
+  background-image: url('/public/img/bg-header.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: max-content;
