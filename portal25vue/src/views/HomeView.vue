@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <PortalHeader numberArea="25" nameArea="Parque Vitória do Sol Nascente" />
-    <!-- Comentado para visualizar, uma vez que o Eslint e o Prettier não gostam de mim e ainda tenho que entender melhor sobre rotas -->
     <div class="content">
       <PortalMain
         title="Any info"
@@ -48,13 +47,13 @@ export default {
   overflow-x: hidden;
   max-width: 100vw;
   min-height: 100vh;
-  background: #606639;
+  background: rgb(166, 172, 127);
   background: linear-gradient(
-    180deg,
-    rgba(96, 102, 57, 1) 0%,
-    rgba(243, 247, 224, 1) 12%,
-    rgba(237, 241, 217, 1) 75%,
-    rgb(166, 172, 127) 100%
+    90deg,
+    rgba(166, 172, 127, 0.8) 0%,
+    rgba(237, 240, 225, 1) 2%,
+    rgba(244, 247, 227, 1) 98%,
+    rgba(166, 172, 127, 0.8) 100%
   );
   /* use in dark 
   background: rgb(63, 57, 102);

@@ -5,15 +5,21 @@
     <p>
       {{ info }}
     </p>
+    <mapsDirections />
+    <!-- just to test view -->
   </div>
 </template>
 
 <script>
+import MapsDirections from './Maps.vue'
 export default {
   name: 'PortalMain',
   props: {
     title: String,
     info: String
+  },
+  components: {
+    MapsDirections
   }
 }
 </script>

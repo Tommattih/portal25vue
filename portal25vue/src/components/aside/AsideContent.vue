@@ -134,6 +134,12 @@ h4 {
   border: 1px dotted #60663962;
   max-width: 25%;
   min-width: min-content;
+  background: rgba(177, 198, 139, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 ul {
   flex-direction: column;
