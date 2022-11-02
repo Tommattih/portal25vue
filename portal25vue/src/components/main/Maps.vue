@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style>
-/*ñ é estilo 
+/*ñ é estilo é nota
 <div class="box">
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1787.8994050230262!2d-46.778048990577396!3d-23.4400447481186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefcf9ff046bed%3A0xbba599a8eb55ab4!2sAlameda%20Aristotenes%20Claudio%20Sbrigh%2C%20923%20-%20Vila%20Jaragu%C3%A1%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005282-000!5e1!3m2!1spt-BR!2sbr!4v1622959672281!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
