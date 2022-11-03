@@ -5,7 +5,7 @@
       <!-- <img src="/img/asideIcons/medal-pvsn.png" alt="" /> -->
       <img
         v-for="focusicon in asideicon"
-        v-show="focusicon.status == true"
+        v-show="focusicon.status"
         :key="focusicon.id"
         :src="focusicon.srcimage"
         :alt="focusicon.alt"
@@ -118,7 +118,7 @@ export default {
           id: 4,
           srcimage: '/img/asideIcons/ico-maps-page.png',
           alt: 'ico-maps',
-          status: false
+          status: true
         },
         {
           id: 5,
@@ -130,7 +130,7 @@ export default {
           id: 6,
           srcimage: '/img/asideIcons/medal-pvsn.png',
           alt: 'medal-pvsn',
-          status: true
+          status: false
         }
       ],
       linkInstagram: 'https://www.instagram.com/pvsn.25/',

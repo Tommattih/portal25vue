@@ -8,7 +8,9 @@
       />
       <AsideContent class="" />
     </div>
-    <p @click="clicou()" class="mb-0 pb-2">M.T. Lins - Brasil - 2022</p>
+    <footer>
+      <p @click="clicou()" class="mb-0 pb-2">M.T. Lins - Brasil - 2022</p>
+    </footer>
   </div>
 </template>
 
