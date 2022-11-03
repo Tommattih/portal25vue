@@ -1,4 +1,3 @@
-"
 <template>
   <div>
     <h3>{{ title }}</h3>
@@ -37,10 +36,3 @@ export default {
   }
 }
 </script>
-
-<style>
-h3 {
-  background: violet;
-}
-</style>
-"

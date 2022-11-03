@@ -2,8 +2,10 @@
   <div id="app">
     <PortalHeader numberArea="25" nameArea="Parque Vitória do Sol Nascente" />
     <div class="content">
-      <router-view />
-      <AsideContent class="" />
+      <div class="boxContent">
+        <router-view />
+      </div>
+      <AsideContent />
     </div>
     <footer>
       <p @click="clicou()" class="mb-0 pb-2">M.T. Lins - Brasil - 2022</p>
@@ -77,7 +79,15 @@ export default {
   flex-direction: row;
   gap: 0.5rem;
 }
-
+.boxContent {
+  border: 1px dotted #60663962;
+  width: 75%;
+  // margin-bottom: 1rem; vai no componente? vai em algum canto pra separar os blocos dentro de boxContent
+}
+h3 {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
 nav {
   padding: 30px;
 
@@ -95,6 +105,7 @@ nav {
     a:hover {
       color: var(--font-color1);
       background: rgba(184, 135, 11, 0.75);
+      border: 1px dashed var(--font-color);
       border-radius: 10px;
       padding: 0.5rem;
       /*only desktop*/

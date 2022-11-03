@@ -46,9 +46,6 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  background: blueviolet;
-}
 img {
   max-width: 100vh;
   padding: 1rem;

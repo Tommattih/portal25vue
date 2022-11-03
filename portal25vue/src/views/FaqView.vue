@@ -28,9 +28,6 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  background: cyan;
-}
 img {
   width: 3rem;
 }

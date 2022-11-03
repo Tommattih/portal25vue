@@ -1,5 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div id="environment">
+    <h3>{{ titleSection }}</h3>
+    <h5>{{ titleNews }}</h5>
+    <p>{{ textNews }}</p>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      titleSection: 'DoBem',
+      titleNews: 'um título',
+      textNews: 'lorembla bla bla...'
+    }
+  }
+}
+</script>

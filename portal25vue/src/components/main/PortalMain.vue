@@ -1,37 +1,23 @@
 <template>
-  <div class="boxContent">
+  <div class="boxExample">
     <h3>{{ title }}</h3>
     <p>
       {{ info }}
     </p>
-    <HistoryView />
+    <!-- <HistoryView /> -->
     <!-- importar componentes estilizados com o formato do box-content 
     OU definir como style scoped -> sim para p, img, h3, list-style, text-decoration 
     OU ???-->
-    <!-- a lógica ta invertida nos componentes e rotas-->
-    <!-- just to test view -->
   </div>
 </template>
 
 <script>
-import HistoryView from '@/views/HistoryView.vue'
+// import HistoryView from '@/views/HistoryView.vue'
 export default {
   name: 'PortalMain',
   props: {
     title: String,
     info: String
-  },
-  components: {
-    HistoryView
   }
 }
 </script>
-<style scoped>
-.boxContent {
-  border: 1px dotted #60663962;
-}
-h3 {
-  background-color: var(--bg-color);
-  color: var(--font-color);
-}
-</style>

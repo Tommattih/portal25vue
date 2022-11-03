@@ -1,7 +1,8 @@
 "
 <template>
   <div>
-    <h3>{{ titleNews }}</h3>
+    <h3>{{ titleSection }}</h3>
+    <h5>{{ titleNews }}</h5>
     <img :src="imageNews" :alt="imageNewsAlt" />
     <p>{{ textNews }}</p>
   </div>
@@ -9,9 +10,10 @@
 
 <script>
 export default {
-  name: 'NewsView',
+  name: 'NewsContent',
   data() {
     return {
+      titleSection: 'News',
       titleNews: 'uma manchete',
       imageNews: '/img/keyframe/ico-pvsn-25-keyframe.png',
       imageNewsAlt: 'uma imagem',
@@ -22,9 +24,6 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  background: blue;
-}
 img {
   max-width: 100vh;
   padding: 1rem;
