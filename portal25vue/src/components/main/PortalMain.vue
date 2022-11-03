@@ -6,7 +6,7 @@
     </p>
     <HistoryView />
     <!-- importar componentes estilizados com o formato do box-content 
-    OU definir como style scoped 
+    OU definir como style scoped -> sim para p, img, h3, list-style, text-decoration 
     OU ???-->
     <!-- a lógica ta invertida nos componentes e rotas-->
     <!-- just to test view -->

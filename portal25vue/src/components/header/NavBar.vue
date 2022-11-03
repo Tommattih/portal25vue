@@ -10,39 +10,80 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">Notícias</b-nav-item>
-          <b-nav-item href="#">História</b-nav-item>
-          <b-nav-item href="#">Rotas</b-nav-item>
-          <b-nav-item href="#"
-            ><router-link to="/do-bem">DoBem</router-link></b-nav-item
+          <!-- using 'routes' instead of 'href="#"'(removed) -->
+          <b-nav-item
+            ><router-link to="/"
+              ><b-icon-house class="me-1"></b-icon-house>Início</router-link
+            ></b-nav-item
           >
-          <b-nav-item href="#">Planta</b-nav-item>
+          <b-nav-item
+            ><router-link to="/historia"
+              ><b-icon-book class="me-1"></b-icon-book>História</router-link
+            ></b-nav-item
+          >
+          <!-- 'href="#"' / pattern from bootstrap navBar docs -->
           <b-nav-item href="#"
-            ><router-link to="/mapas">Mapas</router-link></b-nav-item
+            ><router-link to="/do-bem"
+              ><b-icon-recycle class="me-1"></b-icon-recycle>DoBem</router-link
+            ></b-nav-item
+          >
+          <b-nav-item
+            ><router-link to="/mapas"
+              ><b-icon-map class="me-1"></b-icon-map>Mapas</router-link
+            ></b-nav-item
           >
 
-          <b-nav-item href="#" disabled>Serviços</b-nav-item>
-          <b-nav-item href="#" disabled>Dúvidas</b-nav-item>
+          <b-nav-item
+            ><router-link to="/como-chegar"
+              ><b-icon-pin-map class="me-1"></b-icon-pin-map>Rotas</router-link
+            ></b-nav-item
+          >
+          <b-nav-item
+            ><router-link to="/servicos"
+              ><b-icon-tools class="me-1"></b-icon-tools>Serviços</router-link
+            ></b-nav-item
+          >
+          <b-nav-item disabled
+            ><router-link to="/duvidas"
+              ><b-icon-question-circle class="me-1"></b-icon-question-circle
+              >Dúvidas</router-link
+            ></b-nav-item
+          >
+          <b-nav-item></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
       <!-- to toggle theme -->
-      <div class="form-check form-switch mx-3">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          id="flexSwitchCheckDefault"
-        />
-        <label class="form-check-label" for="flexSwitchCheckDefault"> </label>
-        <!-- <v-else:"" label class="form-check-label" for="flexSwitchCheckDefault"
+      <div class="mx-3">how can I do it?</div>
+
+      <!-- <v-else:"" label class="form-check-label" for="flexSwitchCheckDefault"
           ><b-icon icon="lightbulb-on" aria-hidden="true"></b-icon
         ></label> -->
-      </div>
+      <!-- </div> -->
     </b-navbar>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  data() {
+    return {
+      colorMode: {
+        light: 'img/navItens/button-sun.png',
+        dark: '/img/navItens/button-moon.png'
+      }
+    }
+  }
 }
 </script>
+<style scoped>
+.nav-item:hover {
+  min-width: min-content;
+  background: rgba(177, 198, 139, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+</style>

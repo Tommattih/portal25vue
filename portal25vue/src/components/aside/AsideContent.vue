@@ -176,7 +176,7 @@ h4 {
   margin: 0 auto 0.5rem;
 }
 .asideBox {
-  border: 1px dotted #60663962;
+  /* border: 1px dotted #60663962; */
   max-width: 25%;
   min-width: min-content;
   background: rgba(177, 198, 139, 0.2);
