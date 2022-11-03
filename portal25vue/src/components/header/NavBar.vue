@@ -49,16 +49,13 @@
               >Dúvidas</router-link
             ></b-nav-item
           >
-          <b-nav-item></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
       <!-- to toggle theme -->
-      <div class="mx-3">how can I do it?</div>
-
-      <!-- <v-else:"" label class="form-check-label" for="flexSwitchCheckDefault"
-          ><b-icon icon="lightbulb-on" aria-hidden="true"></b-icon
-        ></label> -->
-      <!-- </div> -->
+      <div class="mx-3">
+        how can I do it?
+        <img @click="changeColor()" :src="colorMode" alt="" width="50" />
+      </div>
     </b-navbar>
   </div>
 </template>
@@ -68,22 +65,20 @@ export default {
   name: 'NavBar',
   data() {
     return {
-      colorMode: {
-        light: 'img/navItens/button-sun.png',
-        dark: '/img/navItens/button-moon.png'
+      colorMode: '/img/navItens/button-moon.png',
+      changeColor: () => {
+        /*quase funciona, vai mas nao volta*/
+        this.colorMode = 'img/navItens/button-sun.png'
+        console.log('trocou')
+        // this.colorMode = 'img/navItens/button-moon.png'
+        // this.setMode = !this.setMode
       }
     }
   }
 }
 </script>
 <style scoped>
-.nav-item:hover {
-  min-width: min-content;
-  background: rgba(177, 198, 139, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(1.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+a.nav-link:hover {
+  color: var(--font-color1);
 }
 </style>
