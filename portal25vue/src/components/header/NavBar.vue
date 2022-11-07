@@ -28,8 +28,8 @@
             ></b-nav-item
           >
           <b-nav-item
-            ><router-link to="/mapas"
-              ><b-icon-map class="me-1"></b-icon-map>Mapas</router-link
+            ><router-link to="/mapa-local"
+              ><b-icon-map class="me-1"></b-icon-map>Local</router-link
             ></b-nav-item
           >
 
@@ -43,7 +43,7 @@
               ><b-icon-tools class="me-1"></b-icon-tools>Serviços</router-link
             ></b-nav-item
           >
-          <b-nav-item disabled
+          <b-nav-item
             ><router-link to="/duvidas"
               ><b-icon-question-circle class="me-1"></b-icon-question-circle
               >Dúvidas</router-link
@@ -54,7 +54,20 @@
       <!-- to toggle theme -->
       <div class="mx-3">
         how can I do it?
-        <img @click="changeColor()" :src="colorMode" alt="" width="50" />
+        <img
+          v-if="isDark"
+          @click="changeColor()"
+          src="img/navItens/button-moon.png"
+          alt=""
+          width="50"
+        />
+        <img
+          v-else
+          @click="changeColor()"
+          src="img/navItens/button-sun.png"
+          alt=""
+          width="50"
+        />
       </div>
     </b-navbar>
   </div>
@@ -65,14 +78,12 @@ export default {
   name: 'NavBar',
   data() {
     return {
-      colorMode: '/img/navItens/button-moon.png',
-      changeColor: () => {
-        /*quase funciona, vai mas nao volta*/
-        this.colorMode = 'img/navItens/button-sun.png'
-        console.log('trocou')
-        // this.colorMode = 'img/navItens/button-moon.png'
-        // this.setMode = !this.setMode
-      }
+      isDark: false
+    }
+  },
+  methods: {
+    changeColor() {
+      this.isDark = !this.isDark
     }
   }
 }

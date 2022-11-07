@@ -2,8 +2,8 @@
   <div id="app">
     <PortalHeader numberArea="25" nameArea="Parque Vitória do Sol Nascente" />
     <div class="content">
-      <div class="boxContent">
-        <router-view />
+      <div id="renderRoutes">
+        <router-view class="boxContent" />
       </div>
       <AsideContent />
     </div>
@@ -17,14 +17,12 @@
 // @ is an alias to /src
 import PortalHeader from '@/components/header/PortalHeader.vue'
 import AsideContent from '@/components/aside/AsideContent.vue'
-// import PortalMain from '@/components/main/PortalMain.vue'
 
 export default {
   name: 'HomeView',
   components: {
     PortalHeader,
     AsideContent
-    // PortalMain
   },
   data() {
     return {
@@ -58,10 +56,10 @@ export default {
     90deg,
     rgba(166, 172, 127, 0.8) 0%,
     rgba(237, 240, 225, 1) 2%,
-    rgba(244, 247, 227, 1) 98%,
+    rgba(244, 247, 227, 0.686) 98%,
     rgba(166, 172, 127, 0.8) 100%
   );
-  /* use in dark 
+  /* use in dark
   background: rgb(63, 57, 102);
   background: linear-gradient(
     14deg,
@@ -71,22 +69,27 @@ export default {
   ); */
 }
 .content {
+  width: 100vw;
   display: inline-flex;
   padding: 0.5rem;
-  margin: 0 0.5rem;
-  justify-content: space-around;
   align-items: flex-start;
   flex-direction: row;
   gap: 0.5rem;
 }
 .boxContent {
   border: 1px dotted #60663962;
-  width: 75%;
-  // margin-bottom: 1rem; vai no componente? vai em algum canto pra separar os blocos dentro de boxContent
+  width: 100%;
+  margin-bottom: 1rem;
+  // padding: 0 1rem; funciona se o h3 ficar fora da div
+}
+#renderRoutes {
+  min-width: 75%;
+  max-width: 90%;
 }
 h3 {
   background-color: var(--bg-color);
   color: var(--font-color);
+  box-shadow: 1px 2px 2px #2c3e50;
 }
 nav {
   padding: 30px;
@@ -111,5 +114,8 @@ nav {
       /*only desktop*/
     }
   }
+}
+p {
+  padding: 0 0.5rem;
 }
 </style>

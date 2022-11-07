@@ -1,5 +1,5 @@
 <template>
-  <div class="rotas">
+  <div id="environment">
     <h3>{{ titleSection }}</h3>
     <h5>{{ titleNews }}</h5>
     <p>{{ textNews }}</p>
@@ -8,13 +8,20 @@
 
 <script>
 export default {
-  name: 'DirectionsView',
+  name: 'EnvironmentTips',
   data() {
     return {
-      titleSection: 'Loteamento & Quadras',
+      titleSection: 'DoBem',
       titleNews: 'um título',
       textNews: 'lorembla bla bla...'
     }
   }
 }
 </script>
+
+<style scoped>
+img {
+  width: 20%;
+  border: solid 3px rgb(123, 255, 0);
+}
+</style>

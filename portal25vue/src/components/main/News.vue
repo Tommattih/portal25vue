@@ -1,10 +1,11 @@
-"
 <template>
   <div>
-    <h3>{{ titleSection }}</h3>
-    <h5>{{ titleNews }}</h5>
-    <img :src="imageNews" :alt="imageNewsAlt" />
-    <p>{{ textNews }}</p>
+    <slot>
+      <h3>{{ titleSection }}</h3>
+      <h5>{{ titleNews }}</h5>
+      <img :src="imageNews" :alt="imageNewsAlt" />
+      <!-- <p>{{ textNews }}</p> -->
+    </slot>
   </div>
 </template>
 
@@ -30,4 +31,3 @@ img {
   border: solid 2px yellow;
 }
 </style>
-"

@@ -3,13 +3,9 @@
     <div class="imgRender mb-2 mobileHidden">
       <!-- tornar dinamico `:src="-acessar um objeto{} no pai, nav altera templates no objeto pra true ou false ..v-show?-"` e `:alt=""` -->
       <!-- <img src="/img/asideIcons/medal-pvsn.png" alt="" /> -->
-      <img
-        v-for="focusicon in asideicon"
-        v-show="focusicon.status"
-        :key="focusicon.id"
-        :src="focusicon.srcimage"
-        :alt="focusicon.alt"
-      />
+      <AsideImage
+        ><img src="/img/asideIcons/medal-pvsn.png" alt="medal-pvsn"
+      /></AsideImage>
     </div>
     <div id="socialMedia" class="row">
       <h4 class="mobileHidden">Mídias Sociais</h4>
@@ -91,48 +87,14 @@
 </template>
 
 <script>
+import AsideImage from '@/components/aside/AsideImage.vue'
 export default {
   name: 'AsideContent',
+  components: {
+    AsideImage
+  },
   data() {
     return {
-      asideicon: [
-        {
-          id: 1,
-          srcimage: '/img/asideIcons/ico-news-page.png',
-          alt: 'ico-news',
-          status: false
-        },
-        {
-          id: 2,
-          srcimage: '/img/asideIcons/ico-history-page.png',
-          alt: 'ico-history',
-          status: false
-        },
-        {
-          id: 3,
-          srcimage: '/img/asideIcons/ico-plants-page.png',
-          alt: 'ico-plants',
-          status: false
-        },
-        {
-          id: 4,
-          srcimage: '/img/asideIcons/ico-maps-page.png',
-          alt: 'ico-maps',
-          status: true
-        },
-        {
-          id: 5,
-          srcimage: '/img/asideIcons/ico-services-page.png',
-          alt: 'ico-services',
-          status: false
-        },
-        {
-          id: 6,
-          srcimage: '/img/asideIcons/medal-pvsn.png',
-          alt: 'medal-pvsn',
-          status: false
-        }
-      ],
       linkInstagram: 'https://www.instagram.com/pvsn.25/',
       linkFacebook: 'https://fb.me/PVSN.25',
       linkWhatsappGroup: 'https://chat.whatsapp.com/K4JaFotEZSWC7EAtq2xn2y',
@@ -150,19 +112,6 @@ export default {
 * {
   list-style: none;
   text-decoration: none;
-}
-@media only screen and (max-width: 768px) {
-  .mobileHidden {
-    display: none;
-  }
-  ul {
-    margin-bottom: 0;
-    gap: 0;
-  }
-  li {
-    margin-bottom: 1rem;
-    padding: 0;
-  }
 }
 /******* full view ********/
 .imgRender img {
@@ -232,5 +181,18 @@ li:hover {
 p {
   text-align: center;
   padding: 0 1.25rem;
+}
+@media only screen and (max-width: 768px) {
+  .mobileHidden {
+    display: none;
+  }
+  ul {
+    margin-bottom: 0;
+    gap: 0;
+  }
+  #socialMedia li {
+    margin-bottom: 0;
+    padding: 0;
+  }
 }
 </style>

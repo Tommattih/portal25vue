@@ -11,8 +11,7 @@ const routes = [
   },
   {
     path: '/do-bem',
-    name: 'dobem',
-    //faz mais sentido importar todos em cima e chamar o componente na rota?
+    name: 'environment',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited..
@@ -20,16 +19,22 @@ const routes = [
       import(/* webpackChunkName: "dobem" */ '../views/EnvironmentView.vue')
   },
   {
-    path: '/mapas',
-    name: 'maps',
-    component: () =>
-      import(/* webpackChunkName: "mapas" */ '../views/MapsView.vue')
-  },
-  {
     path: '/historia',
     name: 'history',
     component: () =>
       import(/* webpackChunkName: "historia" */ '../views/HistoryView.vue')
+  },
+  {
+    path: '/mapa-local',
+    name: 'local',
+    component: () =>
+      import(/* webpackChunkName: "duvidas" */ '../views/AreaView.vue')
+  },
+  {
+    path: '/como-chegar',
+    name: 'maps',
+    component: () =>
+      import(/* webpackChunkName: "mapas" */ '../views/DirectionsView.vue')
   },
   {
     path: '/servicos',
@@ -42,12 +47,6 @@ const routes = [
     name: 'faq',
     component: () =>
       import(/* webpackChunkName: "duvidas" */ '../views/FaqView.vue')
-  },
-  {
-    path: '/como-chegar',
-    name: 'directions',
-    component: () =>
-      import(/* webpackChunkName: "duvidas" */ '../views/DirectionsView.vue')
   }
 ]
 
