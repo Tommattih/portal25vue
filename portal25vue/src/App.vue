@@ -65,7 +65,7 @@ export default {
   align-items: flex-start;
   justify-content: flex-end;
   gap: 0.5rem;
-  margin: 0.75rem;
+  padding: 0.5rem 1rem;
 }
 .boxContent {
   width: 100%;
@@ -73,8 +73,6 @@ export default {
   border: 2px dashed rgb(60 60 40 / 15%);
   display: flex;
   flex-direction: column;
-  // box-shadow: 2px 0px 16px #34432290;
-
   // background: #fff;
 }
 h3 {

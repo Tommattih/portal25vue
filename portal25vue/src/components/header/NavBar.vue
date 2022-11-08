@@ -1,11 +1,6 @@
 <template>
   <div>
-    <b-navbar
-      toggleable="lg"
-      class="py-1 px-2"
-      type="dark"
-      style="background-color: #606639"
-    >
+    <b-navbar toggleable="lg" class="py-1 px-2 bg-color" type="dark">
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
@@ -52,7 +47,7 @@
         </b-navbar-nav>
       </b-collapse>
       <!-- to toggle theme -->
-      <div>
+      <div class="mx-4">
         <img
           v-if="isDark"
           @click="changeColor()"
@@ -90,5 +85,11 @@ export default {
 <style scoped>
 a.nav-link:hover {
   color: var(--font-color1);
+}
+.bg-color {
+  background-color: #606639;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 </style>

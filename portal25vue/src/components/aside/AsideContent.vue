@@ -109,8 +109,7 @@ export default {
 }
 /******* full view ********/
 .imgRender img {
-  /* width: 100%; */
-  height: 32vh;
+  width: 100%;
   padding: 0.5rem 1.5rem;
 }
 h4 {

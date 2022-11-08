@@ -46,7 +46,7 @@ export default {
   height: max-content;
 }
 .areaInfo {
-  margin-top: 1rem;
+  margin-top: 3.3rem;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
