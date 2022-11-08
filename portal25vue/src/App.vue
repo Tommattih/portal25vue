@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  list-style: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,7 +59,7 @@ export default {
   );
 }
 .content {
-  // width: 100%;
+  width: 100%;
   display: inline-flex;
   flex-direction: row;
   align-items: flex-start;
@@ -66,22 +69,18 @@ export default {
 }
 .boxContent {
   width: 100%;
-  border: 1px dotted #60663962;
+  // border: 2px dotted #60663962;
+  border: 2px dashed rgb(60 60 40 / 15%);
   display: flex;
   flex-direction: column;
-}
-// #renderRoutes {
-//   width: 100%;
-//   display: inline-flex;
-// }
-div#environment,
-dic#local {
-  width: 100%;
+  // box-shadow: 2px 0px 16px #34432290;
+
+  // background: #fff;
 }
 h3 {
   background-color: var(--bg-color);
   color: var(--font-color);
-  box-shadow: 1px 2px 2px #2c3e50;
+  box-shadow: 1px 2px 2px #344322;
 }
 nav {
   padding: 30px; //o q faz?
@@ -109,5 +108,14 @@ nav {
 }
 p {
   padding: 0 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0.5rem;
+    align-items: flex-start;
+  }
 }
 </style>

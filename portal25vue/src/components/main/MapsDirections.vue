@@ -2,7 +2,16 @@
   <div id="maps">
     <div class="">
       <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1787.8994050230262!2d-46.778048990577396!3d-23.4400447481186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefcf9ff046bed%3A0xbba599a8eb55ab4!2sAlameda%20Aristotenes%20Claudio%20Sbrigh%2C%20923%20-%20Vila%20Jaragu%C3%A1%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005282-000!5e1!3m2!1spt-BR!2sbr!4v1622959672281!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-      <h3>Como Chegar /como-chegar success</h3>
+      <h3>Como Chegar</h3>
+      <div>
+        <img
+          v-if="isMap"
+          @click="changeMap()"
+          :src="mapDraw"
+          alt="map-top-2d"
+        />
+        <img v-else @click="changeMap()" :src="mapSat" alt="map-top-satelite" />
+      </div>
       <h5>Pontos de referência</h5>
       <p>SP-021, Rodoanel Mario Covas</p>
       <p>Cemitério do Jaraguá</p>
@@ -94,7 +103,7 @@
       </p>
     </div>
     <!-- outro modo -->
-    <div class="">
+    <!-- <div class="">
       <h3>{{ titleMap }}</h3>
       <a :href="googleMaps">
         <img :src="mapSat" alt="" />
@@ -106,7 +115,7 @@
       </p>
       <h5>Pontos de Referencia de Ônibus U+1F68D</h5>
       <p>...</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -127,7 +136,13 @@ export default {
         { id: 4, refPoints: 'KM-24, Rodovia Anhanguera' },
         { id: 5, refPoints: 'Nas proximidades do Pico do Jaraguá' },
         { id: 6, refPoints: 'Terminal Jardim Britânia' }
-      ]
+      ],
+      isMap: false
+    }
+  },
+  methods: {
+    changeMap() {
+      this.isMap = !this.isMap
     }
   }
 }
@@ -135,23 +150,10 @@ export default {
 <style scoped>
 img {
   width: 100%;
-  /* height: 40vh; */
   padding-bottom: 1rem;
 }
-/*ñ é estilo é nota
-            ////talk baloon
-            //html
-            <section class="semicircle"></section> 
-            ///css
-            .semicircle {
-  position: relative;
-  background: #2c3e50;
-  height: 50vh;
+h5 {
+  background: #ccc;
+  padding: 0.25rem 0;
 }
-fazer a navbar dinamicamente, cada botao é um objeto
-{id: 1, text: 'Notícias', visibility: true}
-{id: 2, text: 'Mapas', visibility: false}
-
-usar props pai pra filho [render main]
-usar $emit filho pra pai [trocar asideImage]*/
 </style>

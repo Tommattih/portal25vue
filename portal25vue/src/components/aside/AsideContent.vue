@@ -1,7 +1,6 @@
 <template>
   <div class="asideBox d-grid px-2">
     <div class="imgRender mb-2 mobileHidden">
-      <!-- <img src="/img/asideIcons/medal-pvsn.png" alt="" /> -->
       <slot name="focusimage"
         ><img src="/img/asideIcons/medal-pvsn.png" alt="medal-pvsn"
       /></slot>
@@ -110,7 +109,8 @@ export default {
 }
 /******* full view ********/
 .imgRender img {
-  width: 100%;
+  /* width: 100%; */
+  height: 32vh;
   padding: 0.5rem 1.5rem;
 }
 h4 {
@@ -120,11 +120,10 @@ h4 {
   margin: 0 auto 0.5rem;
 }
 .asideBox {
-  /* border: 1px dotted #60663962; */
   max-width: 25%;
-  min-width: min-content;
+  /* min-width: min-content; precisa?*/
   background: rgba(177, 198, 139, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 16px 0 rgba(60, 90, 20, 0.4);
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   border-radius: 10px;

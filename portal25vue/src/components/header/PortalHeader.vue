@@ -1,9 +1,12 @@
 <template>
   <div class="header">
     <NavBar />
-    <!-- <img class="my-2" alt="Portal Logo" :src="`/img/${imageLogo}.png`" /> -->
     <div class="areaInfo">
-      <img class="logoHeader" alt="Portal Logo" src="/img/ico-pvsn-25.png" />
+      <img
+        class="logoHeader mobileHidden"
+        alt="Portal Logo"
+        src="/img/ico-pvsn-25.png"
+      />
       <div>
         <h2 class="text-start px-3 pt-1 ms-3 mb-0 fs-3">
           Portal da {{ numberArea }}ª Área
@@ -25,11 +28,6 @@ export default {
   components: {
     NavBar
   }
-  // data() {
-  //   return {
-  //     imageLogo: "ico-pvsn-25",
-  //   };
-  // },
 }
 </script>
 
@@ -63,5 +61,10 @@ h2 {
   background-color: var(--bg-color);
   color: var(--font-color);
   width: max-content;
+}
+@media only screen and (max-width: 768px) {
+  .mobileHidden {
+    display: none;
+  }
 }
 </style>

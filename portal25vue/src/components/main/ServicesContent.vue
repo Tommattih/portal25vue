@@ -4,17 +4,17 @@
     <p>Description...</p>
     <ul class="services">
       <h5>Construção</h5>
-      <ul class="groupServices">
+      <ul class="groupServices food">
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
-      <ul class="groupServices1">
+      <ul class="groupServices build">
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
-      <ul class="groupServices2">
+      <ul class="groupServices beauty">
         <li>1</li>
         <li>2</li>
         <li>3</li>

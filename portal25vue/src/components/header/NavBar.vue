@@ -52,21 +52,20 @@
         </b-navbar-nav>
       </b-collapse>
       <!-- to toggle theme -->
-      <div class="mx-3">
-        how can I do it?
+      <div>
         <img
           v-if="isDark"
           @click="changeColor()"
           src="img/navItens/button-moon.png"
-          alt=""
-          width="50"
+          alt="icon-moon"
+          height="45"
         />
         <img
           v-else
           @click="changeColor()"
           src="img/navItens/button-sun.png"
-          alt=""
-          width="50"
+          alt="icon-sun"
+          height="45"
         />
       </div>
     </b-navbar>

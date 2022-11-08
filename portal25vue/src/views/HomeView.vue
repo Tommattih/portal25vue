@@ -1,10 +1,7 @@
 <template>
   <div id="home">
-    <div class="boxContent">
-      <NewsContent
-        ><h3>humm bla</h3>
-        <p>nova noticia</p></NewsContent
-      >
+    <div>
+      <NewsContent class="boxContent mb-2" />
       <HistoryContent />
     </div>
     <AsideContent />
@@ -14,7 +11,7 @@
 <script>
 // @ is an alias to /src
 import AsideContent from '@/components/aside/AsideContent.vue'
-import NewsContent from '@/components/main/News.vue'
+import NewsContent from '@/components/main/NewsContent.vue'
 import HistoryContent from '@/components/main/HistoryContent.vue'
 export default {
   name: 'HomeView',

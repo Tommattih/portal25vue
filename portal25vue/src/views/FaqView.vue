@@ -2,13 +2,8 @@
   <div>
     <faq-content class="boxContent">
       <h3 slot="section">{{ titleFaq }}</h3>
-      <p slot="asks">
-        <!-- <img src="/img/userAsk.png" alt="userAskAvatar" /> -->
-        <!--imgs dispensaveis-->
-        Uma pergunta
-      </p>
+      <p slot="asks">Uma pergunta</p>
       <p slot="answers">
-        <!-- <img src="/img/userAnswer.png" alt="userAnswerAvatar" /> -->
         {{ textFaq }}
       </p>
     </faq-content>

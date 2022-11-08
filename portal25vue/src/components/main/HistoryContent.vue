@@ -1,32 +1,60 @@
 <template>
   <div class="boxContent">
     <h3>História</h3>
-    <img :src="image" :alt="imageAlt" />
-    <h5>O Movimento por Moradia</h5>
-    <p>{{ text }}</p>
-    <h5>A Aprovação</h5>
-    <p>burocracia a luta</p>
-    <p>cetesb</p>
+    <h4>O Movimento por Moradia</h4>
+    <p>
+      A Associação dos Trabalhadores Sem Terra (ATST) faz a ponte entre famílias
+      com recurso financeiro limitado e a conquista da terra própria, entre
+      outras atividades de benefício social.
+    </p>
+    <p>Primeira reunião da 25ª área na ATST (data)</p>
+
+    <h4>Negociação de terras</h4>
+    <p>Família Sbrighi (data)a(data)</p>
+    <p>Família X (data)a(data)</p>
+
+    <h4>Burocracia e luta</h4>
+    <h5>Aprovação da planta geral do loteamento</h5>
+    <p>...(data)</p>
+    <h5>Aprovação da CETESB</h5>
     <p>graprohab</p>
-    <p>aprovacao daa plantas</p>
-    <p>projeto de lei</p>
-    <h5>A Abertura de ruas</h5>
+    <p>Nascentes e curso dágua</p>
+    <p>Árvores em extinção encontradas: Araucárias</p>
+    <p>Biomas da área: Mata atlântica e trecho de serrado</p>
+    <p>Acordo de compensação ambiental(data)</p>
+    <p>...(data)</p>
+
+    <h5>Aprovação da Prefeitura</h5>
+    <p>Lista de documentos e órgaos envolvidos</p>
+    <p>...(data)</p>
+
+    <h5>Liberação para retirada de terra</h5>
+    <p>1º Semestre/2021</p>
+    <p>Projeto de lei, '#' Dep. Riva</p>
+
+    <h5>Abertura de ruas e Marcação dos lotes</h5>
+    <p>... (data)</p>
     <p>
       No dia *** foi publicado no diário oficial d* *** de São Paulo a portaria
       nº**** que deu nome as ruas (visualize na íntegra em Links úteis)
     </p>
+    <h5>Liberação para construção</h5>
+    <p>...</p>
     <p>
       Na reunião do dia 3/12/2021 os associados da 25ª área foi liberado o
       início das construções.
     </p>
-    <h5>A Infrestrutura</h5>
-    <p><strong>Água e Esgoto</strong></p>
-    <p><strong>Luz</strong></p>
-    <p><strong>Asfalto</strong></p>
-    <p><strong>Educação</strong></p>
-    <p><strong>Segurança</strong></p>
-    <p><strong>Saúde</strong></p>
-    <p><strong>Lazer</strong></p>
+
+    <h4>A Infrestrutura</h4>
+    <h5>Água e esgoto</h5>
+    <p>Ínicio das medições - Setembro/2021</p>
+    <p>Início das obras - Outubro/2021</p>
+    <h5>Luz</h5>
+    <h5>Asfalto</h5>
+    <h5>Educação</h5>
+    <h5>Segurança</h5>
+    <h5>Saúde</h5>
+    <h5>Lazer</h5>
   </div>
 </template>
 
