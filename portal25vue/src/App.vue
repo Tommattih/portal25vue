@@ -1,13 +1,10 @@
 <template>
   <div id="app">
     <PortalHeader numberArea="25" nameArea="Parque Vitória do Sol Nascente" />
-    <div class="content">
-      <div id="renderRoutes">
-        <router-view class="boxContent" />
-      </div>
-      <AsideContent />
+    <div>
+      <router-view class="content" />
     </div>
-    <footer>
+    <footer class="mt-2">
       <p @click="clicou()" class="mb-0 pb-2">M.T. Lins - Brasil - 2022</p>
     </footer>
   </div>
@@ -16,13 +13,11 @@
 <script>
 // @ is an alias to /src
 import PortalHeader from '@/components/header/PortalHeader.vue'
-import AsideContent from '@/components/aside/AsideContent.vue'
-
 export default {
   name: 'HomeView',
   components: {
-    PortalHeader,
-    AsideContent
+    PortalHeader
+    // AsideContent
   },
   data() {
     return {
@@ -59,32 +54,29 @@ export default {
     rgba(244, 247, 227, 0.686) 98%,
     rgba(166, 172, 127, 0.8) 100%
   );
-  /* use in dark
-  background: rgb(63, 57, 102);
-  background: linear-gradient(
-    14deg,
-    rgba(63, 57, 102, 1) 0%,
-    rgb(43, 43, 61) 50%,
-    rgb(51, 51, 77) 100%
-  ); */
 }
 .content {
-  width: 100vw;
+  // width: 100%;
   display: inline-flex;
-  padding: 0.5rem;
-  align-items: flex-start;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
   gap: 0.5rem;
+  margin: 0.75rem;
 }
 .boxContent {
-  border: 1px dotted #60663962;
   width: 100%;
-  margin-bottom: 1rem;
-  // padding: 0 1rem; funciona se o h3 ficar fora da div
+  border: 1px dotted #60663962;
+  display: flex;
+  flex-direction: column;
 }
-#renderRoutes {
-  min-width: 75%;
-  max-width: 90%;
+// #renderRoutes {
+//   width: 100%;
+//   display: inline-flex;
+// }
+div#environment,
+dic#local {
+  width: 100%;
 }
 h3 {
   background-color: var(--bg-color);
@@ -92,7 +84,7 @@ h3 {
   box-shadow: 1px 2px 2px #2c3e50;
 }
 nav {
-  padding: 30px;
+  padding: 30px; //o q faz?
 
   a {
     text-decoration: none;

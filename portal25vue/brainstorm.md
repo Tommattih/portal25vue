@@ -1,17 +1,3 @@
-<template>
-  <div>
-    <slot name="navicon">
-      <!-- <img src="/img/asideIcons/ico-doBem-page.png" alt="icon-do-Bem" /> -->
-    </slot>
-  </div>
-</template>
-
-<script>
-// import HistoryView from '@/views/HistoryView.vue'
-export default {
-  name: 'AsideImage',
-  data() {
-    return {
       asideicon: [
         {
           id: 1,
@@ -45,12 +31,21 @@ export default {
         },
         {
           id: 6,
+          srcimage: '/img/asideIcons/ico-faq-page.png',
+          alt: 'ico-faq-page',
+          status: false
+        },
+        {
+          id: 7,
           srcimage: '/img/asideIcons/medal-pvsn.png',
           alt: 'medal-pvsn',
           status: false
         }
       ]
-    }
-  }
-}
-</script>
+      <!-- <img
+        v-for="focusicon in asideicon"
+        v-show="focusicon.status"
+        :key="focusicon.id"
+        :src="focusicon.srcimage"
+        :alt="focusicon.alt"
+    /> -->

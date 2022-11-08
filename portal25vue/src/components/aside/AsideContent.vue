@@ -1,11 +1,10 @@
 <template>
   <div class="asideBox d-grid px-2">
     <div class="imgRender mb-2 mobileHidden">
-      <!-- tornar dinamico `:src="-acessar um objeto{} no pai, nav altera templates no objeto pra true ou false ..v-show?-"` e `:alt=""` -->
       <!-- <img src="/img/asideIcons/medal-pvsn.png" alt="" /> -->
-      <AsideImage
+      <slot name="focusimage"
         ><img src="/img/asideIcons/medal-pvsn.png" alt="medal-pvsn"
-      /></AsideImage>
+      /></slot>
     </div>
     <div id="socialMedia" class="row">
       <h4 class="mobileHidden">Mídias Sociais</h4>
@@ -87,12 +86,8 @@
 </template>
 
 <script>
-import AsideImage from '@/components/aside/AsideImage.vue'
 export default {
   name: 'AsideContent',
-  components: {
-    AsideImage
-  },
   data() {
     return {
       linkInstagram: 'https://www.instagram.com/pvsn.25/',

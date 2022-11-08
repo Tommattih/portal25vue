@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h3>{{ title }}</h3>
+  <div class="boxContent">
+    <h3>História</h3>
     <img :src="image" :alt="imageAlt" />
     <h5>O Movimento por Moradia</h5>
     <p>{{ text }}</p>
@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 img {
-  max-width: 100vh;
+  width: 50%;
   padding: 1rem;
   border: solid 2px yellow;
 }

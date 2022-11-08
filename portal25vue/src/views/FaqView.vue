@@ -1,35 +1,40 @@
-"
 <template>
   <div>
-    <h3>{{ titleFaq }}</h3>
-    <p>{{ textFaq }}</p>
-    <ul>
-      <li class="ask">
-        <img :src="imageFaq" :alt="imageFaqAlt" />
-        <p>lorem...</p>
-      </li>
-      <li>...</li>
-    </ul>
+    <faq-content class="boxContent">
+      <h3 slot="section">{{ titleFaq }}</h3>
+      <p slot="asks">
+        <!-- <img src="/img/userAsk.png" alt="userAskAvatar" /> -->
+        <!--imgs dispensaveis-->
+        Uma pergunta
+      </p>
+      <p slot="answers">
+        <!-- <img src="/img/userAnswer.png" alt="userAnswerAvatar" /> -->
+        {{ textFaq }}
+      </p>
+    </faq-content>
+    <aside-content>
+      <img
+        slot="focusimage"
+        src="/img/asideIcons/ico-faq-page.png"
+        alt="faq-icon"
+    /></aside-content>
   </div>
 </template>
 
 <script>
+import FaqContent from '@/components/main/FaqContent'
+import AsideContent from '@/components/aside/AsideContent.vue'
 export default {
   name: 'FaqView',
+  components: {
+    FaqContent,
+    AsideContent
+  },
   data() {
     return {
       titleFaq: 'Perguntas Frequentes',
-      imageFaq: '/img/keyframe/ico-pvsn-25-keyframe.png',
-      imageFaqAlt: 'um avatar',
       textFaq: 'lorem...'
     }
   }
 }
 </script>
-
-<style scoped>
-img {
-  width: 3rem;
-}
-</style>
-"
