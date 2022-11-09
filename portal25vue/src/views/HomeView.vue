@@ -4,7 +4,7 @@
       <NewsContent class="boxContent mb-2" />
       <HistoryContent />
     </div>
-    <AsideContent />
+    <AsideContent imgSrc="/img/asideIcons/medal-pvsn.png" />
   </div>
 </template>
 

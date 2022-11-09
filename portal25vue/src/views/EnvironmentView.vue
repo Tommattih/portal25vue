@@ -1,12 +1,7 @@
 <template>
   <div>
     <EnvironmentsTips class="boxContent" />
-    <aside-content>
-      <img
-        slot="focusimage"
-        src="/img/asideIcons/ico-doBem-page.png"
-        alt="do-bem-icon"
-    /></aside-content>
+    <AsideContent imgSrc="/img/asideIcons/ico-doBem-page.png" />
   </div>
 </template>
 

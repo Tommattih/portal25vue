@@ -3,18 +3,17 @@
     <h3>{{ titleSection }}</h3>
     <h5>{{ titleNews }}</h5>
     <p>{{ textNews }}</p>
-    <!-- o formato do arquivo no drive esta errado, arrumar quando arrumar o wifi -->
+    <!-- o formato do arquivo no drive esta errado, arrumar quando arrumar o wifi https://drive.google.com/file/d/1lHwLix3QFvup7qz5IQ5og_p8BoiybZCH/view?usp=sharing // https://drive.google.com/file/d/1cCRGCaI7t4wkpNaX2oGFWOuTyzgGaARZ/view?usp=share_link-->
     <img
-      src="https://drive.google.com/file/d/1lHwLix3QFvup7qz5IQ5og_p8BoiybZCH/view?usp=sharing"
+      src="https://tommattih.github.io/portal-25-pvsn/img/PlantaLightPVSN.svg"
       alt="Traçado de delimitação estimado das ruas do loteamento"
     />
     <img
-      class="newlinks"
-      src="https://drive.google.com/file/d/1cCRGCaI7t4wkpNaX2oGFWOuTyzgGaARZ/view?usp=share_link"
+      src="https://tommattih.github.io/portal-25-pvsn/img/RuasLoteamentoPVSN.svg"
       alt="Traçado de delimitação estimado das ruas do loteamento"
     />
     <img
-      src="ttps://drive.google.com/file/d/1wL5JUv5JAPpUlpp-GnHNbZOoNuwSLM2y/view?usp=sharing"
+      src="https://drive.google.com/file/d/1wL5JUv5JAPpUlpp-GnHNbZOoNuwSLM2y/view?usp=sharing"
       alt="link para download da planta completa em PDF"
     />
     <h5>Visão geral</h5>
@@ -75,7 +74,8 @@ export default {
 </script>
 <style scoped>
 img {
-  width: 20%;
-  border: solid 3px blue;
+  width: 95%;
+  margin: 0 auto 1rem;
+  box-shadow: -1px 2px 4px rgba(45, 61, 37, 0.52);
 }
 </style>

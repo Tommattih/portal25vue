@@ -1,12 +1,7 @@
 <template>
   <div>
     <MapDirections class="boxContent" />
-    <aside-content>
-      <img
-        slot="focusimage"
-        src="/img/asideIcons/ico-maps-page.png"
-        alt="maps-icon"
-    /></aside-content>
+    <AsideContent imgSrc="/img/asideIcons/ico-maps-page.png" />
   </div>
 </template>
 <script>

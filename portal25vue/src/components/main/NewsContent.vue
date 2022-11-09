@@ -46,7 +46,7 @@ export default {
     return {
       titleSection: 'Notícias',
       titleNews: 'Resumo da reunião - 21/08/2021',
-      imageNews: '',
+      imageNews: 'https://tommattih.github.io/portal-25-pvsn/img/sabesp.svg',
       imageNewsAlt: 'uma imagem',
       textNews: 'lorem...'
     }
@@ -56,8 +56,8 @@ export default {
 
 <style scoped>
 img {
-  max-width: 100vh;
-  padding: 1rem;
-  border: solid 2px yellow;
+  max-width: 100%;
+  margin: 0 1rem 1rem;
+  box-shadow: -1px 2px 4px rgba(45, 61, 37, 0.52);
 }
 </style>

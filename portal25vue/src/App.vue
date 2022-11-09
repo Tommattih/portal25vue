@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <NavBar />
     <PortalHeader numberArea="25" nameArea="Parque Vitória do Sol Nascente" />
     <div>
       <router-view class="content" />
@@ -12,12 +13,13 @@
 
 <script>
 // @ is an alias to /src
+import NavBar from '@/components/header/NavBar.vue'
 import PortalHeader from '@/components/header/PortalHeader.vue'
 export default {
   name: 'HomeView',
   components: {
-    PortalHeader
-    // AsideContent
+    PortalHeader,
+    NavBar
   },
   data() {
     return {
@@ -37,9 +39,28 @@ export default {
 </script>
 
 <style lang="scss">
-* {
+:root {
+  --bg-color: #606639;
+  --font-color2: #262b05;
+  --font-color: #f3f7e0;
+  box-sizing: border-box;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--font-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--font-color2);
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -53,8 +74,8 @@ export default {
   background: linear-gradient(
     90deg,
     rgba(166, 172, 127, 0.8) 0%,
-    rgba(237, 240, 225, 1) 2%,
-    rgba(244, 247, 227, 0.686) 98%,
+    rgba(240, 240, 225, 1) 1%,
+    rgba(244, 247, 227, 0.6) 99%,
     rgba(166, 172, 127, 0.8) 100%
   );
 }
@@ -73,7 +94,7 @@ export default {
   border: 2px dashed rgb(60 60 40 / 15%);
   display: flex;
   flex-direction: column;
-  // background: #fff;
+  background: #fff;
 }
 h3 {
   background-color: var(--bg-color);
@@ -81,12 +102,9 @@ h3 {
   box-shadow: 1px 2px 2px #344322;
 }
 nav {
-  padding: 30px; //o q faz?
-
   a {
     text-decoration: none;
     font-weight: bold;
-    // color: #2c502c;
     color: var(--font-color);
     transition: 0.3s;
 
@@ -96,16 +114,18 @@ nav {
     }
     a:hover {
       color: var(--font-color1);
-      background: rgba(184, 135, 11, 0.75);
-      border: 1px dashed var(--font-color);
-      border-radius: 10px;
-      padding: 0.5rem;
-      /*only desktop*/
+      background: var(--font-color);
+      border: 2px dashed var(--bg-color);
+      border-radius: 25%;
+      padding: 0.5em;
     }
   }
 }
-p {
-  padding: 0 0.5rem;
+h1,
+.bg-color,
+.header,
+.boxContent {
+  box-shadow: -1px 2px 4px rgba(45, 61, 37, 0.52);
 }
 
 @media only screen and (max-width: 768px) {

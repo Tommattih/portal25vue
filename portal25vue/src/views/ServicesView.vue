@@ -1,12 +1,7 @@
 <template>
   <div>
     <ServicesContent />
-    <aside-content>
-      <img
-        slot="focusimage"
-        src="/img/asideIcons/ico-services-page.png"
-        alt="services-icon"
-    /></aside-content>
+    <AsideContent imgSrc="/img/asideIcons/ico-services-page.png" />
   </div>
 </template>
 

@@ -1,12 +1,7 @@
 <template>
   <div>
     <AreaRefs class="boxContent" />
-    <aside-content>
-      <img
-        slot="focusimage"
-        src="/img/asideIcons/ico-plants-page.png"
-        alt="mapa-local"
-    /></aside-content>
+    <AsideContent imgSrc="/img/asideIcons/ico-plants-page.png" />
   </div>
 </template>
 

@@ -7,12 +7,7 @@
         {{ textFaq }}
       </p>
     </faq-content>
-    <aside-content>
-      <img
-        slot="focusimage"
-        src="/img/asideIcons/ico-faq-page.png"
-        alt="faq-icon"
-    /></aside-content>
+    <AsideContent imgSrc="/img/asideIcons/ico-faq-page.png" />
   </div>
 </template>
 

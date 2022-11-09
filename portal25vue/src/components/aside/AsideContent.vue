@@ -1,9 +1,7 @@
 <template>
   <div class="asideBox d-grid px-2">
     <div class="imgRender mb-2 mobileHidden">
-      <slot name="focusimage"
-        ><img src="/img/asideIcons/medal-pvsn.png" alt="medal-pvsn"
-      /></slot>
+      <img :src="imgSrc" alt="medal-pvsn" />
     </div>
     <div id="socialMedia" class="row">
       <h4 class="mobileHidden">Mídias Sociais</h4>
@@ -87,6 +85,7 @@
 <script>
 export default {
   name: 'AsideContent',
+  props: ['imgSrc'],
   data() {
     return {
       linkInstagram: 'https://www.instagram.com/pvsn.25/',
@@ -110,7 +109,7 @@ export default {
 /******* full view ********/
 .imgRender img {
   width: 100%;
-  padding: 0.5rem 1.5rem;
+  padding: 0 1rem;
 }
 h4 {
   font-size: 1.25rem;
@@ -119,14 +118,15 @@ h4 {
   margin: 0 auto 0.5rem;
 }
 .asideBox {
-  max-width: 25%;
-  /* min-width: min-content; precisa?*/
+  padding: 0.5rem 0;
+  max-width: 18%;
   background: rgba(177, 198, 139, 0.2);
-  box-shadow: 0 8px 16px 0 rgba(60, 90, 20, 0.4);
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(1.5px);
+  box-shadow: -2px 10px 10px 0 rgb(50 75 25 / 50%);
+  /* backdrop-filter: blur(1.5px); */
+  /* -webkit-backdrop-filter: blur(1.5px); */
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  justify-content: center;
 }
 ul {
   flex-direction: column;
@@ -134,46 +134,33 @@ ul {
   align-items: stretch;
   gap: 0.5rem;
 }
+#aboutDev a,
 li {
-  transition: 0.25s;
-  margin-bottom: 1px;
+  transition: 0.25s ease-in-out;
 }
 ul li img {
   height: 1.75rem;
   margin: 0.5rem;
 }
-p,
 a,
 a:hover {
   font-size: 1.1rem;
   color: var(--font-color2);
-  text-shadow: 2px 0px 3px var(--font-color);
+  text-shadow: 0px 0px 6px var(--font-color);
 }
+#aboutDev a:hover,
 li:hover {
-  border: groove 1px #bbd8a36c;
   border-radius: 0.5rem;
-  background: var(--font-color);
-  filter: brightness(1.025);
-  margin: 0 1.25rem;
-}
-#socialMedia li {
-  padding: 0 1.25rem;
+  filter: brightness(1.2);
+  background: #9daf7145;
+  box-shadow: -1px 2px 4px rgba(45, 61, 37, 0.52);
 }
 #aboutDev img {
   width: 5rem;
   margin: 0.5rem auto;
 }
-#aboutDev a:hover {
-  width: 80%; /*turn patern?*/
-  margin: 0 auto;
-  transition: 0.25s;
-  border-radius: 0.5rem;
-  background: var(--font-color);
-  filter: brightness(0.9);
-}
 p {
   text-align: center;
-  padding: 0 1.25rem;
 }
 @media only screen and (max-width: 768px) {
   .mobileHidden {

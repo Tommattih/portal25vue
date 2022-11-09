@@ -1,30 +1,41 @@
 <template>
   <div class="boxContent">
     <h3>Serviços Locais</h3>
-    <p>Description...</p>
-    <ul class="services">
+    <div class="services">
+      <h5>Alimentação</h5>
+      <div class="groupServices food d-flex gap-2">
+        <modelContent />
+        <modelContent />
+        <modelContent />
+      </div>
       <h5>Construção</h5>
-      <ul class="groupServices food">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-      <ul class="groupServices build">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-      <ul class="groupServices beauty">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-    </ul>
+      <div class="groupServices build d-flex gap-2">
+        <modelContent />
+        <modelContent />
+        <modelContent />
+      </div>
+
+      <h5>Saúde & Bem-estar</h5>
+      <div class="groupServices beauty d-flex gap-2">
+        <modelContent />
+        <modelContent />
+        <modelContent />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import modelContent from '@/components/modelContent.vue'
 export default {
-  name: 'ServicesContent'
+  name: 'ServicesContent',
+  components: {
+    modelContent
+  }
 }
 </script>
+<style scoped>
+.groupServices {
+  justify-content: center;
+}
+</style>

@@ -1,70 +1,76 @@
 <template>
   <div class="header">
-    <NavBar />
+    <img
+      class="logoHeader mobileHidden"
+      alt="Portal Logo"
+      src="/img/ico-pvsn-25.png"
+    />
     <div class="areaInfo">
-      <img
-        class="logoHeader mobileHidden"
-        alt="Portal Logo"
-        src="/img/ico-pvsn-25.png"
-      />
-      <div>
-        <h2 class="text-start px-3 pt-1 ms-3 mb-0 fs-3">
-          Portal da {{ numberArea }}ª Área
-        </h2>
-        <h1 class="text-start px-3 mx-3 mb-3 fs-1">{{ nameArea }}</h1>
-      </div>
+      <h2 class="mb-0 pt-2">Portal da {{ numberArea }}ª Área</h2>
+      <h1 class="mb-0">{{ nameArea }}</h1>
     </div>
   </div>
 </template>
 
 <script>
-import NavBar from '@/components/header/NavBar.vue'
 export default {
   name: 'PortalHeader',
   props: {
     numberArea: String,
     nameArea: String
-  },
-  components: {
-    NavBar
   }
 }
 </script>
 
-<style>
-:root {
-  --bg-color: #606639;
-  --font-color2: #262b05;
-  --font-color: #f3f7e0;
-  box-sizing: border-box;
-}
-
+<style scoped>
 .header {
-  background-image: url('/public/img/bg-header.png');
+  background-image: url(https://tommattih.github.io/portal-25-pvsn/img/sabesptube.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: max-content;
-}
-.areaInfo {
+  width: 100vw;
   margin-top: 3.3rem;
+  padding: 0.5rem 1rem;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: flex-end;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
 }
 img.logoHeader {
   width: 6rem;
-  margin: 0 0 0.75rem 4rem;
 }
 h1,
 h2 {
   background-color: var(--bg-color);
   color: var(--font-color);
-  width: max-content;
+  width: fit-content;
+  padding: 0 0.5rem;
 }
-@media only screen and (max-width: 768px) {
+h1 {
+  -webkit-border-radius: 30px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius: 30px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 30px;
+  border-top-left-radius: 0;
+}
+h2 {
+  -webkit-border-top-left-radius: 30px;
+  -webkit-border-top-right-radius: 30px;
+  -moz-border-radius-topleft: 30px;
+  -moz-border-radius-topright: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+@media only screen and (max-width: 728px) {
   .mobileHidden {
     display: none;
+  }
+  .header {
+    margin-top: 3rem;
+  }
+  .areaInfo {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 </style>

@@ -45,24 +45,24 @@
             ></b-nav-item
           >
         </b-navbar-nav>
+        <!-- to toggle theme -->
+        <div class="lightButton">
+          <img
+            v-if="isDark"
+            @click="changeColor()"
+            src="img/navItens/button-moon.png"
+            alt="icon-moon"
+            height="45"
+          />
+          <img
+            v-else
+            @click="changeColor()"
+            src="img/navItens/button-sun.png"
+            alt="icon-sun"
+            height="45"
+          />
+        </div>
       </b-collapse>
-      <!-- to toggle theme -->
-      <div class="mx-4">
-        <img
-          v-if="isDark"
-          @click="changeColor()"
-          src="img/navItens/button-moon.png"
-          alt="icon-moon"
-          height="45"
-        />
-        <img
-          v-else
-          @click="changeColor()"
-          src="img/navItens/button-sun.png"
-          alt="icon-sun"
-          height="45"
-        />
-      </div>
     </b-navbar>
   </div>
 </template>
@@ -88,8 +88,15 @@ a.nav-link:hover {
 }
 .bg-color {
   background-color: #606639;
+  z-index: 10;
   position: fixed;
   top: 0;
   width: 100vw;
+}
+.lightButton img {
+  cursor: pointer;
+}
+.navbar-expand-lg .navbar-collapse {
+  justify-content: space-between; /*??*/
 }
 </style>
