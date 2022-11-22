@@ -1,11 +1,8 @@
 <template>
   <div id="environment">
-    <h3>{{ titleSection }}</h3>
-    <p>{{ textNews }}</p>
-    <h5>Ter um bairro modelo é possível</h5>
-    <p>
-      Todos nós sonhamos com uma vizinhança bonita, agradável, limpa e feliz.
-    </p>
+    <h3>{{ environmentData.titleSection }}</h3>
+    <h5>{{ environmentData.subtitleText }}</h5>
+    <p>{{ environmentData.text }}</p>
     <p>
       <strong
         >Mas como isso pode ser possível na situação atual financeira do
@@ -46,11 +43,10 @@
 <script>
 export default {
   name: 'EnvironmentTips',
-  data() {
-    return {
-      titleSection: 'DoBem',
-      titleNews: 'um título',
-      textNews: 'lorembla bla bla...'
+  props: {
+    environmentData: {
+      type: Object,
+      required: true
     }
   }
 }

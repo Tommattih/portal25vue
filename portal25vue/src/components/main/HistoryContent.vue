@@ -51,6 +51,10 @@
     <p>Início das obras - Outubro/2021</p>
     <h5>Luz</h5>
     <h5>Asfalto</h5>
+    <p>
+      Instalação da placa de implantação de guias e sarjetas em 1º de Outubro de
+      2022
+    </p>
     <h5>Educação</h5>
     <h5>Segurança</h5>
     <h5>Saúde</h5>

@@ -1,9 +1,9 @@
 <template>
   <div>
     <slot>
-      <h3>{{ titleSection }}</h3>
-      <h5>{{ titleNews }}</h5>
-      <img :src="imageNews" :alt="imageNewsAlt" />
+      <h3>{{ newsData.titleSection }}</h3>
+      <h5>{{ newsData.titleNews }}</h5>
+      <img :src="newsData.imageNews" :alt="newsData.imageNewsAlt" />
       <p>
         A <strong>SABESP irá operar no loteamento</strong>, possivelmente, em
         meados de Outubro. No momento desta reunião está concluindo os serviços
@@ -42,13 +42,10 @@
 <script>
 export default {
   name: 'NewsContent',
-  data() {
-    return {
-      titleSection: 'Notícias',
-      titleNews: 'Resumo da reunião - 21/08/2021',
-      imageNews: 'https://tommattih.github.io/portal-25-pvsn/img/sabesp.svg',
-      imageNewsAlt: 'uma imagem',
-      textNews: 'lorem...'
+  props: {
+    newsData: {
+      type: Object,
+      required: true
     }
   }
 }

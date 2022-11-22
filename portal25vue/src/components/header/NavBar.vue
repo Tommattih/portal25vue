@@ -46,21 +46,26 @@
           >
         </b-navbar-nav>
         <!-- to toggle theme -->
-        <div class="lightButton">
-          <img
-            v-if="isDark"
-            @click="changeColor()"
-            src="img/navItens/button-moon.png"
-            alt="icon-moon"
-            height="45"
-          />
-          <img
-            v-else
-            @click="changeColor()"
-            src="img/navItens/button-sun.png"
-            alt="icon-sun"
-            height="45"
-          />
+        <div class="lightButton" mode="out-in">
+          <transition name="appear">
+            <img
+              v-if="isDark"
+              @click="changeColor()"
+              src="img/navItens/button-moon.png"
+              alt="icon-moon"
+              height="40"
+            />
+          </transition>
+
+          <transition name="appear" mode="out-in">
+            <img
+              v-if="!isDark"
+              @click="changeColor()"
+              src="img/navItens/button-sun.png"
+              alt="icon-sun"
+              height="40"
+            />
+          </transition>
         </div>
       </b-collapse>
     </b-navbar>
@@ -97,6 +102,21 @@ a.nav-link:hover {
   cursor: pointer;
 }
 .navbar-expand-lg .navbar-collapse {
-  justify-content: space-between; /*??*/
+  justify-content: space-between; /**/
+}
+
+.appear-enter-active,
+.appear-leave-active {
+  transition: transform 0.3s, opacity 0.2s;
+}
+.appear-leave-to,
+.appear-enter-from {
+  transform: scale(0);
+  opacity: 0;
+}
+.appear-leave,
+.appear-enter-to {
+  transform: scale(1);
+  opacity: 1;
 }
 </style>

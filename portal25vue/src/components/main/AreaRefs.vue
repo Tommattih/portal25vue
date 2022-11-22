@@ -12,10 +12,7 @@
       src="https://tommattih.github.io/portal-25-pvsn/img/RuasLoteamentoPVSN.svg"
       alt="Traçado de delimitação estimado das ruas do loteamento"
     />
-    <img
-      src="https://drive.google.com/file/d/1wL5JUv5JAPpUlpp-GnHNbZOoNuwSLM2y/view?usp=sharing"
-      alt="link para download da planta completa em PDF"
-    />
+
     <h5>Visão geral</h5>
     <p>
       Divisão das quadras, ruas e lotes

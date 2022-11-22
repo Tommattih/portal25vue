@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <div>
-      <NewsContent class="boxContent mb-2" />
+      <NewsContent :newsData="newsData" class="boxContent mb-2" />
       <HistoryContent />
     </div>
     <AsideContent imgSrc="/img/asideIcons/medal-pvsn.png" />
@@ -22,6 +22,13 @@ export default {
   },
   data() {
     return {
+      newsData: {
+        titleSection: 'Notícias',
+        titleNews: 'Resumo da reunião - 21/08/2021',
+        imageNews: 'https://tommattih.github.io/portal-25-pvsn/img/sabesp.svg',
+        imageNewsAlt: 'uma imagem',
+        textNews: 'lorem...'
+      },
       news: true,
       history: 'false',
       maps: 'false',

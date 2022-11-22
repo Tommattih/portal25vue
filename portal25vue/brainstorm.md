@@ -1,9 +1,10 @@
       asideicon: [
         {
           id: 1,
-          srcimage: '/img/asideIcons/ico-news-page.png',
-          alt: 'ico-news',
+                    srcimage: '/img/asideIcons/medal-pvsn.png',
+          alt: 'medal-pvsn',
           status: false
+
         },
         {
           id: 2,
@@ -37,9 +38,7 @@
         },
         {
           id: 7,
-          srcimage: '/img/asideIcons/medal-pvsn.png',
-          alt: 'medal-pvsn',
-          status: false
+
         }
       ]
       <!-- <img
