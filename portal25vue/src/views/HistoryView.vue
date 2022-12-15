@@ -2,13 +2,6 @@
   <div>
     <HistoryContent />
     <AsideContent imgSrc="/img/asideIcons/ico-history-page.png" />
-
-    <!-- <aside-content>
-      <img
-        slot="focusimage"
-        src=""
-        alt="history-icon"
-    /></aside-content> -->
   </div>
 </template>
 

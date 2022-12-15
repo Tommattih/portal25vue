@@ -1,0 +1,113 @@
+{
+  "asideimage": [
+        {
+          "id": 1,
+          "srcimage": "/img/asideIcons/medal-pvsn.png",
+          "alt": "medal-pvsn"
+        },
+        {
+          "id": 2,
+          "srcimage": "/img/asideIcons/ico-history-page.png",
+          "alt": "ico-history"
+        },
+        {
+          "id": 3,
+          "srcimage": "/img/asideIcons/ico-plants-page.png",
+          "alt": "ico-plants"
+        },
+        {
+          "id": 4,
+          "srcimage": "/img/asideIcons/ico-maps-page.png",
+          "alt": "ico-maps"
+        },
+        {
+          "id": 5,
+          "srcimage": "/img/asideIcons/ico-services-page.png",
+          "alt": "ico-services"
+        },
+        {
+          "id": 6,
+          "srcimage": "/img/asideIcons/ico-faq-page.png",
+          "alt": "ico-faq-page"
+        }
+      ],
+  "new-post":[
+    {
+      "id":1,
+      "leadh4":"testeH4",
+      "imagesource":"testeimg",
+      "imagealt":"testealt",
+      "figcaption": null,
+      "paragraphs":[
+        {"id":1, "paragraph": null},
+        {"id":2, "paragraph": null},
+        {"id":3, "paragraph": null},
+        {"id":4, "paragraph": null}
+      ]
+    },
+    {
+      "id":2,
+      "leadh4":"Imagens selecionadas aleatoriamente",
+      "imagesource":"https://unsplash.com/s/photos/random",
+      "imagealt":"Uma imagem aleatória",
+      "figcaption":"Alguma coisa acontecendo vinda randomicamente do unsplash",
+      "paragraphs":[
+        {"id":1, "paragraph":"P1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam doloremque architecto id velit facilis voluptas, facere saepe perspiciatis aut omnis cumque rerum numquam fuga consequatur explicabo possimus, repudiandae distinctio beatae!"},
+        {"id":2, "paragraph":"P2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam doloremque architecto id velit facilis voluptas, facere saepe perspiciatis aut omnis cumque rerum numquam fuga consequatur explicabo possimus, repudiandae distinctio beatae!"},
+        {"id":3, "paragraph":"P3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam doloremque architecto id velit facilis voluptas, facere saepe perspiciatis aut omnis cumque rerum numquam fuga consequatur explicabo possimus, repudiandae distinctio beatae!"},
+        {"id":4, "paragraph":"P4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam doloremque architecto id velit facilis voluptas, facere saepe perspiciatis aut omnis cumque rerum numquam fuga consequatur explicabo possimus, repudiandae distinctio beatae!"}
+      ]
+    }
+  ],
+  "services":[
+    {"food":[]},
+    {"drinks":[]},
+    {"groceries":[]},
+    {"clothing":[]},
+    {"repair":[
+      {"car":[]},
+      {"cellphone":[]},
+      {"appliances":[]}
+    ]},
+    {"home":[
+      {"plumber":[]},
+      {"electrician":[]},
+      {"painter":[]},
+      {"bricklayer":[]},
+      {"babysitter":[]},
+      {"petsitter":[]},
+      {"cleaner":[]},
+      {"gardener":[]}
+    ]},
+    {"selfcare":[
+      {"hair":[]},
+      {"body":[]},
+      {"dentist":[]},
+      {"gym":[]}
+    ]},
+    {"handmade":[]},
+    {"schools":[]}
+  ],
+  "history":[
+    {"begin":{}},
+    {"negotiation":{}},
+    {"approvals":{}},
+    {"water":{}},
+    {"energy":{}},
+    {"paving":{}},
+    {"education":{}},
+    {"safety":{}},
+    {"health":{}}
+  ],
+  "learning":{
+    "titleH3": "fulano",
+    "headerH4": "something happens",
+    "image":{
+      "imageSource":"https://scontent-gru1-1.xx.fbcdn.net/v/t39.30808-6/307845262_206414321733404_8206158012872861433_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=wzei7WdWlrwAX_zyHIx&tn=KagrbQYREQtSXhj1&_nc_ht=scontent-gru1-1.xx&oh=00_AfBfhcxXa-noRbz21uv3C4VR7Bk8ZoXVZwvX8mMPjrPM4g&oe=638AD475",
+      "imagealt": "Escavadeira aplainando terreno",
+      "figcaption":"Escavadeira aplainando terreno*"
+    },
+    "paragraphs":["various", "texts"],
+    "extras": null  
+  }
+}

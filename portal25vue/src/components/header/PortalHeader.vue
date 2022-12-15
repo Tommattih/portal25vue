@@ -68,9 +68,20 @@ h2 {
   .header {
     margin-top: 3rem;
   }
+  h1 {
+    border-radius: 30px;
+    font-size: 1.8rem;
+    padding: 0.25rem 0.75rem;
+  }
+  h2 {
+    padding: 0 1.5rem;
+    font-size: 1.35rem;
+  }
   .areaInfo {
     flex-wrap: wrap;
     justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 </style>

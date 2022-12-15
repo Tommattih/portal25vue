@@ -2,7 +2,7 @@
   <div>
     <slot>
       <h3>{{ newsData.titleSection }}</h3>
-      <h5>{{ newsData.titleNews }}</h5>
+      <h4>{{ newsData.titleNews }}</h4>
       <img :src="newsData.imageNews" :alt="newsData.imageNewsAlt" />
       <p>
         A <strong>SABESP irá operar no loteamento</strong>, possivelmente, em

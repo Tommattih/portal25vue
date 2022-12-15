@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <div>
-      <NewsContent :newsData="newsData" class="boxContent mb-2" />
+      <NewsContent :newsData="newsData" class="boxContent" />
       <HistoryContent />
     </div>
     <AsideContent imgSrc="/img/asideIcons/medal-pvsn.png" />

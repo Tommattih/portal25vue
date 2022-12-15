@@ -45,28 +45,6 @@
             ></b-nav-item
           >
         </b-navbar-nav>
-        <!-- to toggle theme -->
-        <div class="lightButton" mode="out-in">
-          <transition name="appear">
-            <img
-              v-if="isDark"
-              @click="changeColor()"
-              src="img/navItens/button-moon.png"
-              alt="icon-moon"
-              height="40"
-            />
-          </transition>
-
-          <transition name="appear" mode="out-in">
-            <img
-              v-if="!isDark"
-              @click="changeColor()"
-              src="img/navItens/button-sun.png"
-              alt="icon-sun"
-              height="40"
-            />
-          </transition>
-        </div>
       </b-collapse>
     </b-navbar>
   </div>
@@ -74,17 +52,7 @@
 
 <script>
 export default {
-  name: 'NavBar',
-  data() {
-    return {
-      isDark: false
-    }
-  },
-  methods: {
-    changeColor() {
-      this.isDark = !this.isDark
-    }
-  }
+  name: 'NavBar'
 }
 </script>
 <style scoped>
@@ -92,31 +60,13 @@ a.nav-link:hover {
   color: var(--font-color1);
 }
 .bg-color {
-  background-color: #606639;
+  background-color: var(--bg-color);
   z-index: 10;
   position: fixed;
   top: 0;
   width: 100vw;
 }
-.lightButton img {
-  cursor: pointer;
-}
 .navbar-expand-lg .navbar-collapse {
-  justify-content: space-between; /**/
-}
-
-.appear-enter-active,
-.appear-leave-active {
-  transition: transform 0.3s, opacity 0.2s;
-}
-.appear-leave-to,
-.appear-enter-from {
-  transform: scale(0);
-  opacity: 0;
-}
-.appear-leave,
-.appear-enter-to {
-  transform: scale(1);
-  opacity: 1;
+  justify-content: space-between; /*? space-between faz algo muito especifico, acho q com o botão de modo*/
 }
 </style>
